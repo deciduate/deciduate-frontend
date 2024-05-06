@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #002d56;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+}
+.logo {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.menuDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.menu {
+  margin: 10px;
+}
