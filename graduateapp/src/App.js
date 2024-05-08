@@ -1,11 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./component/Header/Navbar";
+import InsertBasic from "./component/basicInput/InsertBasic";
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <InsertBasic />
     </BrowserRouter>
   );
 }
