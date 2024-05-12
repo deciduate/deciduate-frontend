@@ -22,9 +22,6 @@ export default function LoadingBar({ value = 0, onComplete = () => {} }) {
 
   return (
     <div className={styles.loading}>
-      <span style={{ color: "black", width: "100%", zIndex: 2 }}>
-        {percent.toFixed()}%
-      </span>
       <div
         className={styles.progressBar}
         style={{
