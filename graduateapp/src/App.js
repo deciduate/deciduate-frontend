@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Loading />
+      <InsertBasic />
     </BrowserRouter>
   );
 }
