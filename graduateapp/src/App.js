@@ -13,13 +13,15 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
-      <Loading />
-      <My/>
-      <BasicInfo />
-      <CreditInfo />
-      <SubjectInfo />
-      <EtcInfo />
-      <InsertBasic />
+      <Routes>
+        <Route path="/MY" element={<My />} />
+        <Route path="/MY/BasicInfo" element={<BasicInfo />} />
+        <Route path="/MY/CreditInfo" element={<CreditInfo />} />
+        <Route path="/MY/SubjectInfo" element={<SubjectInfo />} />
+        <Route path="/MY/EtcInfo" element={<EtcInfo />} />
+        {/* <Loading /> */}
+        <Route path="/InsertBasic" element={<InsertBasic />} />
+      </Routes>
     </BrowserRouter>
   );
 }
