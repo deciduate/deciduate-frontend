@@ -1,0 +1,262 @@
+/* My.js */
+*{
+  box-sizing: border-box;
+  /* border: 2px solid #002D56 ; */
+}
+
+.page {
+  padding: 10% 10%;
+  margin: 0 auto;
+}
+
+.cheerUp {
+  font-family: 'Pretendard-Medium';
+  font-size: 35px;
+  padding: 0 0 5rem 0;
+}
+
+.infoIndexContainer {
+  display: grid;
+  font-family: 'Pretendard-Regular';
+  font-size: 30px;
+  color: #FFFFFF;
+  line-height: 2.9rem;
+}
+
+.infoIndex {
+  padding: 0 0 0 15px;
+  max-width: fit-content;
+}
+
+.updateAction{
+  font-family: 'Pretendard-Regular';
+  font-size: 26px;
+  color: #FFFFFF;
+  text-align: center;
+  width: 141px;
+  height: 54px;
+  background-color: #555555;
+  border: none;
+  border-radius: 12px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  width: 80%;
+  min-width: 700px;
+  height: 113px;
+  flex: left;
+  border-radius: 32px;
+  margin: 0 0 1rem 0;
+  padding: 0.7rem;
+}
+
+.updateState {
+  color: #1874FF;
+}
+
+
+/* UpdateInfoMenu.js */
+
+.updateInfoMenu {
+  float: left;
+}
+
+.indexContainer {
+  width:max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.editInfo {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  background-color: #002D56;
+  color: #FFFFFF;
+  text-align: center;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 0 0 0.7rem 0;
+
+}
+
+/* BasicInfo.js */
+
+.infoUpdateContainer {
+  display: grid;
+  height: auto;
+}
+
+.updateContainer {
+  background-color:#FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  padding: 2rem 3rem;
+  width: 80%;
+  min-width: 550px;
+  height: 100%;
+  font-family: 'Pretendard-Medium';
+  font-size: 24px;
+}
+
+.inputInfo {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  padding: 1rem;
+}
+
+
+.studentId{
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 350px;
+  height: 50px;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+/* 업데이트 박스 공통 */
+
+.inputInfo2 {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+.inputInfo3 {
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 210px;
+  height: 50px;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+.Completed {
+  width: 136px;
+  height: 55px;
+  border: none;
+  border-radius: 1000px;
+  background-color: #000000;
+  font-family: 'Pretendard-Regular';
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 0.7rem;
+  margin: 0 0 0.7rem 0;
+  float: right;
+}
+
+
+
+
+/* MajorIndexDropdown.js*/
+
+.dropdown {
+  width: 130px;
+  height: 50px;
+  /* padding: 1rem; */
+  position: relative;
+  user-select: none;
+}
+
+.dropdown .dropdownButton {
+  padding: 15px 20px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 130px;
+  height: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.dropdown .dropdownContents {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  padding: 10px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 130px;
+}
+
+.dropdown .dropdownContents .dropdownItems {
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdown .dropdownContents .dropdownItems :hover {
+  background-color: #F4f4f4;
+
+}
+
+
+/* MajorDropdown.js*/
+
+.dropdown2 {
+  width: 210px;
+  height: 50px;
+  position: relative;
+  user-select: none;
+}
+
+.dropdown2 .dropdownButton2 {
+  padding: 15px 20px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 210px;
+  height: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+.dropdown2 .dropdownContents2 {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  padding: 10px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 210px;
+}
+
+.dropdown2 .dropdownContents2 .dropdownItems2 {
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdown2 .dropdownContents2 .dropdownItems2 :hover {
+  background-color: #F4f4f4;
+
+}
+
+
+.inputInfo4 {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 130px;
+  height: 50px;
+  padding: 15px 0 0 20px;
+
+}
