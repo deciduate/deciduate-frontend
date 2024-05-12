@@ -19,6 +19,7 @@ function App() {
       <CreditInfo />
       <SubjectInfo />
       <EtcInfo />
+      <InsertBasic />
     </BrowserRouter>
   );
 }
