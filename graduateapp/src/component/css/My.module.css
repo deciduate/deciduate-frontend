@@ -1,12 +1,12 @@
 /* My.js */
 *{
   box-sizing: border-box;
-  /* border: 2px solid #002D56 ; */
 }
 
 .page {
   padding: 10% 10%;
   margin: 0 auto;
+  position: relative;
 }
 
 .cheerUp {
@@ -23,23 +23,6 @@
   line-height: 2.9rem;
 }
 
-.infoIndex {
-  padding: 0 0 0 15px;
-  max-width: fit-content;
-}
-
-.updateAction{
-  font-family: 'Pretendard-Regular';
-  font-size: 26px;
-  color: #FFFFFF;
-  text-align: center;
-  width: 141px;
-  height: 54px;
-  background-color: #555555;
-  border: none;
-  border-radius: 12px;
-}
-
 .infoContainer {
   display: flex;
   flex-direction: column;
@@ -53,16 +36,35 @@
   padding: 0.7rem;
 }
 
+.infoIndex {
+  padding: 0 0 0 15px;
+  max-width: fit-content;
+  position: absolute;
+  float: left;
+}
+
 .updateState {
   color: #1874FF;
 }
 
+.updateAction{
+  font-family: 'Pretendard-Regular';
+  font-size: 26px;
+  color: #FFFFFF;
+  text-align: center;
+  width: 141px;
+  height: 54px;
+  background-color: #555555;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  position: relative;
+  float: right;
+}
+
 
 /* UpdateInfoMenu.js */
-
-.updateInfoMenu {
-  float: left;
-}
 
 .indexContainer {
   width:max-content;
@@ -73,7 +75,7 @@
 .editInfo {
   font-family: 'Pretendard-Regular';
   font-size: 20px;
-  background-color: #002D56;
+  background-color: #555555;
   color: #FFFFFF;
   text-align: center;
   border: none;
@@ -83,11 +85,22 @@
 
 }
 
+.editInfo:hover,
+.editInfo:active {
+  background-color: #002D56;
+}
+
+.editInfo:visited{
+  background-color: #002D56;
+}
+
+
 /* BasicInfo.js */
 
 .infoUpdateContainer {
   display: grid;
   height: auto;
+  position: absolute;
 }
 
 .updateContainer {
@@ -95,11 +108,13 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   padding: 2rem 3rem;
-  width: 80%;
-  min-width: 550px;
-  height: 100%;
-  font-family: 'Pretendard-Medium';
-  font-size: 24px;
+
+  width: 750px;
+  height: auto;
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  position: relative;
+  margin-bottom: 3rem;
 }
 
 .inputInfo {
@@ -110,18 +125,18 @@
 
 
 .studentId{
+  margin: 11px 0 0 0;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 350px;
+  width: 355px;
   height: 50px;
   font-family: 'Pretendard-Regular';
   font-size: 20px;
 }
 
-/* 업데이트 박스 공통 */
-
 .inputInfo2 {
+  margin: 11px 0 0 0;
   display: flex;
   flex-direction: row;
   font-family: 'Pretendard-Regular';
@@ -154,24 +169,22 @@
 }
 
 
-
-
 /* MajorIndexDropdown.js*/
 
 .dropdown {
-  width: 130px;
+  width: 120px;
   height: 50px;
   /* padding: 1rem; */
   position: relative;
   user-select: none;
 }
 
-.dropdown .dropdownButton {
+.dropdownButton {
   padding: 15px 20px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 130px;
+  width: 120px;
   height: 50px;
   color: black;
   display: flex;
@@ -179,44 +192,46 @@
   justify-content: space-between;
 } 
 
-.dropdown .dropdownContents {
+.dropdownContents {
   position: absolute;
+  z-index: 1;
   top: 110%;
   left: 0;
   padding: 10px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 130px;
+  width: 120px;
 }
 
-.dropdown .dropdownContents .dropdownItems {
+.dropdownItems {
   padding: 3px;
   cursor: pointer;
   transition: all 0.2s;
+  z-index: 1;
 }
 
-.dropdown .dropdownContents .dropdownItems :hover {
+.dropdownItems :hover {
   background-color: #F4f4f4;
-
+  z-index: 0;
 }
 
 
 /* MajorDropdown.js*/
 
 .dropdown2 {
-  width: 210px;
+  width: 230px;
   height: 50px;
   position: relative;
   user-select: none;
 }
 
-.dropdown2 .dropdownButton2 {
+.dropdownButton2 {
   padding: 15px 20px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 230px;
   height: 50px;
   color: black;
   display: flex;
@@ -224,28 +239,30 @@
   justify-content: space-between;
 } 
 
-.dropdown2 .dropdownContents2 {
+.dropdownContents2 {
   position: absolute;
+  z-index: 1;
   top: 110%;
   left: 0;
   padding: 10px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 230px;
 }
 
-.dropdown2 .dropdownContents2 .dropdownItems2 {
+.dropdownItems2 {
   padding: 3px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.dropdown2 .dropdownContents2 .dropdownItems2 :hover {
+.dropdownItems2 :hover {
   background-color: #F4f4f4;
-
 }
 
+
+/* CreditInfo.js */
 
 .inputInfo4 {
   display: flex;
@@ -255,8 +272,73 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 130px;
+  width: 120px;
   height: 50px;
   padding: 15px 0 0 20px;
+  margin: 5px 0 0 0;
+}
 
+
+/* StudentInputRadio.js */
+
+.studentRadio {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+[type='radio'] {
+  margin: 11px 7px -2px 0;
+  appearance: none;
+  border: max(2px, 0.1rem) solid gray;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+[type="radio"]:checked {
+  border: 0.65rem solid #008194;
+}
+
+
+/* SubjectInputRadio.js */
+
+.subjectRadio {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+
+/* EtcInfo.js */
+.majorTest {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+}
+
+.EnglishPass {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+}
+
+
+/* GraduateTestCheckbox.js */
+
+[type='checkbox'] {
+  margin: 11px 7px -2px 0;
+  appearance: none;
+  border: max(2px, 0.1rem) solid gray;
+  border-radius: 7px;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+[type="checkbox"]:checked {
+  border: 0.65rem solid #008194;
+
+}
+
+
+.ForeignLanguageTestRadio {
+  margin: 0 0 0 -1rem;
 }
