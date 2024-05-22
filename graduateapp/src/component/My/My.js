@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../css/My.module.css";
 import { Link } from "react-router-dom";
 
@@ -16,7 +16,7 @@ export default function My() {
 
   return (
     <div className={styles.page}>
-      <p className={styles.cheerUp}>졸업까지 달려봅시다!</p>
+      <span className={styles.cheerUp}>졸업까지 달려봅시다!</span>
       <div className={styles.infoIndexContainer}>
         <div className={styles.infoContainer}>
           <div className={styles.infoIndex}>

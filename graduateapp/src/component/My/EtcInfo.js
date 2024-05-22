@@ -17,7 +17,7 @@ export default function EditInfo() {
           <div className={styles.majorTest}>
             졸업 시험/ 논문 통과 여부
             <GraduateTextCheckbox />
-          </div> 
+          </div>
           <div className={styles.EnglishPass}>
             외국어 인증 점수 보유 및 제출 여부
             <ForeignLanguageTestRadio />

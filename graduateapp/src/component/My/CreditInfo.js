@@ -14,50 +14,68 @@ export default function EditInfo() {
     <div className={styles.page}>
       <div className={styles.infoUpdateContainer}>
         <UpdateInfoMenu />
+
         <div className={styles.updateContainer}>
           <div className={styles.inputInfo}>
             구분 및 이수 학점
 
-            <div>
-             <div className={styles.inputInfo2}>
-              <MajorIndexDropdown />&nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
+            <div className={styles.container}>
+              <div className={styles.inputInfoContainer1}>
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>1전공</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
 
-              <div className={styles.inputInfo2}>
-              <MajorIndex2Dropdown className={styles.inputInfo4}/>&nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>이중전공</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>2전공</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>실외</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>교양</div>&nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>부전공</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>교직</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>자선</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+              </div>
+
+
+              <div className={styles.inputInfoContainer2}>
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>총취득</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+                <div className={styles.inputInfo2}>
+                  <div className={styles.inputInfo4}>총평점</div> &nbsp;
+                  <label><input className={styles.inputInfo5} type="number" /></label></div>
+              </div>
+
+
             </div>
 
 
-            <div className={styles.inputInfo2}>
-              <div className={styles.inputInfo4}>실외</div> &nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
-
-            <div className={styles.inputInfo2}>
-              <div className={styles.inputInfo4}>교양</div>&nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
-
-            <div className={styles.inputInfo2}>
-              <div className={styles.inputInfo4}>교직</div> &nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
-
-            <div className={styles.inputInfo2}>
-              <div className={styles.inputInfo4}>자선</div> &nbsp;
-              <label><input className={styles.inputInfo3} type="number" /></label></div>
+            <br />
+            <Link to="/MY"><button className={styles.Completed}>수정 완료하기</button></Link>
 
           </div>
-
-
-
-
-
-          <br /><br />
-          <Link to="/MY"><button className={styles.Completed}>수정 완료하기</button></Link>
-
         </div>
       </div>
     </div>
-
 
   );
 }
