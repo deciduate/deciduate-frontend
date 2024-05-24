@@ -1,5 +1,5 @@
 /* My.js */
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -11,23 +11,23 @@
 }
 
 .cheerUp {
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
   font-size: 30px;
-  padding: 0 0 0.5rem 0; 
+  padding: 0 0 0.5rem 0;
 }
 
 .cheerUp2 {
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
   font-size: 30px;
-  padding: 0 0 2rem 0; 
+  padding: 0 0 2rem 0;
 }
 
 .infoIndexContainer {
   display: grid;
   margin-top: 2rem;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 31px;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 2.5rem;
 }
 
@@ -51,17 +51,17 @@
 }
 
 .updateState {
-  color: #1874FF;
+  color: #1874ff;
 }
 
 .updatedState {
   color: #008194;
 }
 
-.updateAction{
-  font-family: 'Pretendard-Regular';
+.updateAction {
+  font-family: "Pretendard-Regular";
   font-size: 23px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   width: 121px;
   height: 50px;
@@ -74,7 +74,6 @@
   float: right;
 }
 
-
 /* EditMenu.js */
 
 .updateInfoMenu {
@@ -83,49 +82,51 @@
 }
 
 .indexContainer {
-  width:max-content;
+  width: max-content;
   display: flex;
   flex-direction: column;
 }
 
 .editInfo {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
   background-color: #555555;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   border: none;
   border-radius: 12px;
   padding: 1rem;
   margin: 0 0 0.7rem 0;
-
 }
 
 .editInfo:hover,
 .editInfo:active {
-  background-color: #002D56;
+  background-color: #002d56;
 }
 
-.editInfo:visited{
-  background-color: #002D56;
+.editInfo:visited {
+  background-color: #002d56;
 }
 
+.active {
+  background-color: #002d56;
+}
 
 /* EditProfiles.js */
 
-.infoUpdateContainer{
+.infoUpdateContainer {
   white-space: nowrap;
 }
 
 .updateContainer {
-  background-color:#FFFFFF;
+  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   padding: 2rem 3rem;
 
   width: 750px;
   height: auto;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 23px;
   margin-bottom: 3rem;
 
@@ -134,20 +135,19 @@
 }
 
 .inputInfo {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
   padding: 1rem;
 }
 
-
-.studentId{
+.studentId {
   margin: 11px 0 0 0;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 340px;
   height: 50px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
@@ -155,17 +155,17 @@
   margin: 11px 0 0 0;
   display: flex;
   flex-direction: row;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
 .inputInfo3 {
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 330px;
   height: 50px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
@@ -175,15 +175,14 @@
   border: none;
   border-radius: 1000px;
   background-color: #000000;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
   padding: 0.7rem;
   margin: 0 0 0.7rem 0;
   float: right;
 }
-
 
 /* MajorDropdown.js*/
 
@@ -196,7 +195,7 @@
 
 .dropdownButton2 {
   padding: 15px 20px;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 340px;
@@ -205,7 +204,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-} 
+}
 
 .dropdownContents2 {
   position: absolute;
@@ -213,7 +212,7 @@
   top: 110%;
   left: 0;
   padding: 10px;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 340px;
@@ -226,18 +225,17 @@
 }
 
 .dropdownItems2 :hover {
-  background-color: #F4f4f4;
+  background-color: #f4f4f4;
 }
-
 
 /* CreditInfo.js */
 
 .inputInfo4 {
   display: flex;
   flex-direction: row;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 120px;
@@ -247,12 +245,12 @@
 }
 
 .inputInfo5 {
-  background-color: #F3F5F7;
+  background-color: #f3f5f7;
   border: none;
   border-radius: 8px;
   width: 170px;
   height: 50px;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
@@ -261,16 +259,14 @@
   justify-content: space-between;
 }
 
-
-
 /* StudentInputRadio.js */
 
 .studentRadio {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
-[type='radio'] {
+[type="radio"] {
   margin: 11px 7px -2px 1rem;
   appearance: none;
   border: max(2px, 0.1rem) solid gray;
@@ -283,21 +279,19 @@
   border: 0.33rem solid #008194;
 }
 
-
 /* SubjectInputRadio.js */
 
 .subjectRadio {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
-
 
 /* SubjectBox.js */
 
 .subjectContainer {
   display: inline-flex;
   flex-wrap: nowrap;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   width: 500px;
@@ -305,24 +299,22 @@
   margin: 0 1.8rem 1rem 0;
 }
 
-
 /* EtcInfo.js */
 .majorTest {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 23px;
   padding: 1rem;
 }
 
 .EnglishPass {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 23px;
   padding: 1rem;
 }
 
-
 /* GraduateTestCheckbox.js */
 
-[type='checkbox'] {
+[type="checkbox"] {
   margin: 11px 7px -2px 0;
   appearance: none;
   border: max(2px, 0.1rem) solid gray;
@@ -333,9 +325,7 @@
 
 [type="checkbox"]:checked {
   border: 0.33rem solid #008194;
-
 }
-
 
 .ForeignLanguageTestRadio {
   margin: 0 0 0 -1rem;
