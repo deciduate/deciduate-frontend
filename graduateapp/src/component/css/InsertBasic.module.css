@@ -51,7 +51,7 @@
 
 input[type="number"],
 input[type="text"] {
-  flex: 1; /* 요소를 동적으로 크기 조절합니다. */
+  flex: 1;
   padding: 8px;
   margin-top: 5px;
   box-sizing: border-box;
