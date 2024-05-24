@@ -6,8 +6,8 @@ function Navbar() {
   return (
     <>
       <div className={styles.navContainer}>
-        <Link to="/" className={styles.logo}>
-          <div>졸업할 결심</div>
+        <Link to="/">
+          <div className={styles.logo}>졸업할 결심</div>
         </Link>
         <div className={styles.menuDiv}>
           <div className={styles.menu}>
@@ -15,8 +15,8 @@ function Navbar() {
             <span className={styles.menu}>Link</span>
           </div>
           <span className={styles.menu}>About</span>
-          <Link to="/MY" className={styles.menu}>
-            <span> MY</span>
+          <Link to="/MY">
+            <span className={styles.menu}>MY</span>
           </Link>
         </div>
       </div>

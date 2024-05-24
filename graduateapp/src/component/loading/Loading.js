@@ -21,8 +21,6 @@ export default function Loading() {
       <div className={styles.app}>
         <Loadingbar value={value} onComplete={() => setSuccess(true)} />
       </div>
-      {/* <span>{success?"":""}</span> */}{" "}
-      {/*success하면 결과 페이지로 넘어가기*/}
     </div>
   );
 }

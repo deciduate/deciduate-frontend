@@ -1,0 +1,89 @@
+/* Result_Pass.js */
+
+* {
+  box-sizing: border-box;
+}
+
+.congrat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.passTitle {
+  font-family: "Pretendard-Extrabold";
+  font-size: 50px;
+  letter-spacing: 150%;
+  margin: 15px;
+}
+
+.congratPic {
+  width: 65px;
+  vertical-align: bottom;
+}
+
+.passSubTitle {
+  font-family: "Pretendard-Medium";
+  letter-spacing: 130%;
+  font-size: 30px;
+}
+
+
+/* Result_NonPass.js */
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  padding: 5rem 10rem 4rem 10rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.cheerUp {
+  font-family: 'Pretendard-Medium';
+  font-size: 30px;
+  padding: 0 0 2rem 0;
+}
+
+
+.resultContainer {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: scroll auto;
+}
+
+.specificResultContainer {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  width: 280px;
+  height: 400px;
+  margin: 0 1.8rem 0 0;
+}
+
+.moreInfo {
+  background-color: #D9D9D9;
+  position: fixed;
+  bottom: 1rem;
+}
+
+.moreInfo:hover {
+  cursor: pointer;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.moreInfoPic {
+  width: 20px;
+  vertical-align: bottom;
+}
