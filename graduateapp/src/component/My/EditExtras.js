@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "../css/My.module.css";
-import UpdateInfoMenu from "./UpdateInfoMenu";
-import ForeignLanguageTestRadio from "./ForeignLanguageTestRadio";
-import GraduateTextCheckbox from "./GraduateTestCheckbox";
+import EditMenu from "./EditMenu";
 import { Link } from "react-router-dom";
+import ForeignLanguageTestRadio from './ForeignLanguageTestRadio';
 
 
 export default function EditInfo() {
@@ -12,11 +11,14 @@ export default function EditInfo() {
   return (
     <div className={styles.page}>
       <div className={styles.infoUpdateContainer}>
-        <UpdateInfoMenu />
+        <EditMenu />
         <div className={styles.updateContainer}>
           <div className={styles.majorTest}>
-            졸업 시험/ 논문 통과 여부
-            <GraduateTextCheckbox />
+            졸업 시험/ 논문 통과 여부 <br/>
+            <input type="checkbox"
+              name="testPass" value="main_test_pass" />본전공 통과 <br/>
+            <input type="checkbox"
+              name="testPass" value="double_test_pass" />이중전공 통과
           </div>
           <div className={styles.EnglishPass}>
             외국어 인증 점수 보유 및 제출 여부

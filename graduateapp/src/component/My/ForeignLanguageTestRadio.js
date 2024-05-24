@@ -8,7 +8,8 @@ export default function ForeignLanguageTestRadio() {
     { id: 1, title: '통과기준2' },
     { id: 2, title: '통과기준3' },
     { id: 3, title: '통과기준4' },
-    { id: 4, title: '통과기준5' }
+    { id: 4, title: '통과기준5' },
+    { id: 5, title: '해당 없음' }
   ];
 
   const [checkedItems, setCheckedItems] = useState([]);

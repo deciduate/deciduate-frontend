@@ -4,7 +4,7 @@
 }
 
 .page {
-  padding: 7rem;
+  padding: 5rem 7rem 0 7rem;
   margin: 0 auto;
   display: grid;
   justify-content: center;
@@ -12,30 +12,31 @@
 
 .cheerUp {
   font-family: 'Pretendard-Medium';
-  font-size: 35px;
+  font-size: 30px;
+  padding: 0 0 0.5rem 0; 
 }
 
 .cheerUp2 {
   font-family: 'Pretendard-Medium';
-  font-size: 35px;
-  padding: 0 0 3rem 0; 
+  font-size: 30px;
+  padding: 0 0 2rem 0; 
 }
 
 .infoIndexContainer {
   display: grid;
-  margin-top: 6rem;
+  margin-top: 2rem;
   font-family: 'Pretendard-Regular';
-  font-size: 35px;
+  font-size: 31px;
   color: #FFFFFF;
-  line-height: 3rem;
+  line-height: 2.5rem;
 }
 
 .infoContainer {
   display: flex;
   flex-direction: column;
   background-color: #333333;
-  width: 720px;
-  height: 130px;
+  width: 650px;
+  height: 113px;
   flex: left;
   border-radius: 32px;
   margin: 0 0 1rem 0;
@@ -43,7 +44,7 @@
 }
 
 .infoIndex {
-  padding: 0 0 0 15px;
+  padding: 0 0 0 20px;
   max-width: fit-content;
   position: absolute;
   float: left;
@@ -53,13 +54,17 @@
   color: #1874FF;
 }
 
+.updatedState {
+  color: #008194;
+}
+
 .updateAction{
   font-family: 'Pretendard-Regular';
-  font-size: 26px;
+  font-size: 23px;
   color: #FFFFFF;
   text-align: center;
-  width: 141px;
-  height: 60px;
+  width: 121px;
+  height: 50px;
   background-color: #555555;
   border: none;
   border-radius: 12px;
@@ -70,7 +75,7 @@
 }
 
 
-/* UpdateInfoMenu.js */
+/* EditMenu.js */
 
 .updateInfoMenu {
   float: left;
@@ -106,7 +111,11 @@
 }
 
 
-/* BasicInfo.js */
+/* EditProfiles.js */
+
+.infoUpdateContainer{
+  white-space: nowrap;
+}
 
 .updateContainer {
   background-color:#FFFFFF;
@@ -136,7 +145,7 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 355px;
+  width: 340px;
   height: 50px;
   font-family: 'Pretendard-Regular';
   font-size: 20px;
@@ -154,7 +163,7 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 330px;
   height: 50px;
   font-family: 'Pretendard-Regular';
   font-size: 20px;
@@ -176,58 +185,10 @@
 }
 
 
-/* MajorIndexDropdown.js*/
-
-.dropdown {
-  width: 120px;
-  height: 50px;
-  /* padding: 1rem; */
-  position: relative;
-  user-select: none;
-}
-
-.dropdownButton {
-  padding: 15px 20px;
-  background-color: #F3F5F7;
-  border: none;
-  border-radius: 8px;
-  width: 120px;
-  height: 50px;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} 
-
-.dropdownContents {
-  position: absolute;
-  z-index: 1;
-  top: 110%;
-  left: 0;
-  padding: 10px;
-  background-color: #F3F5F7;
-  border: none;
-  border-radius: 8px;
-  width: 120px;
-}
-
-.dropdownItems {
-  padding: 3px;
-  cursor: pointer;
-  transition: all 0.2s;
-  z-index: 1;
-}
-
-.dropdownItems :hover {
-  background-color: #F4f4f4;
-  z-index: 0;
-}
-
-
 /* MajorDropdown.js*/
 
 .dropdown2 {
-  width: 230px;
+  width: 340px;
   height: 50px;
   position: relative;
   user-select: none;
@@ -238,7 +199,7 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 230px;
+  width: 340px;
   height: 50px;
   color: black;
   display: flex;
@@ -255,7 +216,7 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 230px;
+  width: 340px;
 }
 
 .dropdownItems2 {
@@ -310,7 +271,7 @@
 }
 
 [type='radio'] {
-  margin: 11px 7px -2px 0;
+  margin: 11px 7px -2px 1rem;
   appearance: none;
   border: max(2px, 0.1rem) solid gray;
   border-radius: 50%;
