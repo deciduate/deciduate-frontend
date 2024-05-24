@@ -1,67 +1,85 @@
 /* My.js */
 *{
   box-sizing: border-box;
-  /* border: 2px solid #002D56 ; */
 }
 
 .page {
-  padding: 10% 10%;
+  padding: 5rem 7rem 0 7rem;
   margin: 0 auto;
+  display: grid;
+  justify-content: center;
 }
 
 .cheerUp {
   font-family: 'Pretendard-Medium';
-  font-size: 35px;
-  padding: 0 0 5rem 0;
+  font-size: 30px;
+  padding: 0 0 0.5rem 0; 
+}
+
+.cheerUp2 {
+  font-family: 'Pretendard-Medium';
+  font-size: 30px;
+  padding: 0 0 2rem 0; 
 }
 
 .infoIndexContainer {
   display: grid;
+  margin-top: 2rem;
   font-family: 'Pretendard-Regular';
-  font-size: 30px;
+  font-size: 31px;
   color: #FFFFFF;
-  line-height: 2.9rem;
-}
-
-.infoIndex {
-  padding: 0 0 0 15px;
-  max-width: fit-content;
-}
-
-.updateAction{
-  font-family: 'Pretendard-Regular';
-  font-size: 26px;
-  color: #FFFFFF;
-  text-align: center;
-  width: 141px;
-  height: 54px;
-  background-color: #555555;
-  border: none;
-  border-radius: 12px;
+  line-height: 2.5rem;
 }
 
 .infoContainer {
   display: flex;
   flex-direction: column;
   background-color: #333333;
-  width: 80%;
-  min-width: 700px;
+  width: 650px;
   height: 113px;
   flex: left;
   border-radius: 32px;
   margin: 0 0 1rem 0;
-  padding: 0.7rem;
+  padding: 1rem;
+}
+
+.infoIndex {
+  padding: 0 0 0 20px;
+  max-width: fit-content;
+  position: absolute;
+  float: left;
 }
 
 .updateState {
   color: #1874FF;
 }
 
+.updatedState {
+  color: #008194;
+}
 
-/* UpdateInfoMenu.js */
+.updateAction{
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  color: #FFFFFF;
+  text-align: center;
+  width: 121px;
+  height: 50px;
+  background-color: #555555;
+  border: none;
+  border-radius: 12px;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  position: relative;
+  float: right;
+}
+
+
+/* EditMenu.js */
 
 .updateInfoMenu {
   float: left;
+  margin: 0 50px 0 0;
 }
 
 .indexContainer {
@@ -73,7 +91,7 @@
 .editInfo {
   font-family: 'Pretendard-Regular';
   font-size: 20px;
-  background-color: #002D56;
+  background-color: #555555;
   color: #FFFFFF;
   text-align: center;
   border: none;
@@ -83,11 +101,20 @@
 
 }
 
-/* BasicInfo.js */
+.editInfo:hover,
+.editInfo:active {
+  background-color: #002D56;
+}
 
-.infoUpdateContainer {
-  display: grid;
-  height: auto;
+.editInfo:visited{
+  background-color: #002D56;
+}
+
+
+/* EditProfiles.js */
+
+.infoUpdateContainer{
+  white-space: nowrap;
 }
 
 .updateContainer {
@@ -95,11 +122,15 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   padding: 2rem 3rem;
-  width: 80%;
-  min-width: 550px;
-  height: 100%;
-  font-family: 'Pretendard-Medium';
-  font-size: 24px;
+
+  width: 750px;
+  height: auto;
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  margin-bottom: 3rem;
+
+  position: relative;
+  float: left;
 }
 
 .inputInfo {
@@ -110,18 +141,18 @@
 
 
 .studentId{
+  margin: 11px 0 0 0;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 350px;
+  width: 340px;
   height: 50px;
   font-family: 'Pretendard-Regular';
   font-size: 20px;
 }
 
-/* 업데이트 박스 공통 */
-
 .inputInfo2 {
+  margin: 11px 0 0 0;
   display: flex;
   flex-direction: row;
   font-family: 'Pretendard-Regular';
@@ -132,7 +163,7 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 330px;
   height: 50px;
   font-family: 'Pretendard-Regular';
   font-size: 20px;
@@ -154,69 +185,21 @@
 }
 
 
-
-
-/* MajorIndexDropdown.js*/
-
-.dropdown {
-  width: 130px;
-  height: 50px;
-  /* padding: 1rem; */
-  position: relative;
-  user-select: none;
-}
-
-.dropdown .dropdownButton {
-  padding: 15px 20px;
-  background-color: #F3F5F7;
-  border: none;
-  border-radius: 8px;
-  width: 130px;
-  height: 50px;
-  color: black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} 
-
-.dropdown .dropdownContents {
-  position: absolute;
-  top: 110%;
-  left: 0;
-  padding: 10px;
-  background-color: #F3F5F7;
-  border: none;
-  border-radius: 8px;
-  width: 130px;
-}
-
-.dropdown .dropdownContents .dropdownItems {
-  padding: 3px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.dropdown .dropdownContents .dropdownItems :hover {
-  background-color: #F4f4f4;
-
-}
-
-
 /* MajorDropdown.js*/
 
 .dropdown2 {
-  width: 210px;
+  width: 340px;
   height: 50px;
   position: relative;
   user-select: none;
 }
 
-.dropdown2 .dropdownButton2 {
+.dropdownButton2 {
   padding: 15px 20px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 340px;
   height: 50px;
   color: black;
   display: flex;
@@ -224,28 +207,30 @@
   justify-content: space-between;
 } 
 
-.dropdown2 .dropdownContents2 {
+.dropdownContents2 {
   position: absolute;
+  z-index: 1;
   top: 110%;
   left: 0;
   padding: 10px;
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 210px;
+  width: 340px;
 }
 
-.dropdown2 .dropdownContents2 .dropdownItems2 {
+.dropdownItems2 {
   padding: 3px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.dropdown2 .dropdownContents2 .dropdownItems2 :hover {
+.dropdownItems2 :hover {
   background-color: #F4f4f4;
-
 }
 
+
+/* CreditInfo.js */
 
 .inputInfo4 {
   display: flex;
@@ -255,8 +240,103 @@
   background-color: #F3F5F7;
   border: none;
   border-radius: 8px;
-  width: 130px;
+  width: 120px;
   height: 50px;
   padding: 15px 0 0 20px;
+  margin: 5px 2px 0 0;
+}
 
+.inputInfo5 {
+  background-color: #F3F5F7;
+  border: none;
+  border-radius: 8px;
+  width: 170px;
+  height: 50px;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* StudentInputRadio.js */
+
+.studentRadio {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+[type='radio'] {
+  margin: 11px 7px -2px 1rem;
+  appearance: none;
+  border: max(2px, 0.1rem) solid gray;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+[type="radio"]:checked {
+  border: 0.33rem solid #008194;
+}
+
+
+/* SubjectInputRadio.js */
+
+.subjectRadio {
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+
+/* SubjectBox.js */
+
+.subjectContainer {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  width: 500px;
+  height: auto;
+  margin: 0 1.8rem 1rem 0;
+}
+
+
+/* EtcInfo.js */
+.majorTest {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+}
+
+.EnglishPass {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+}
+
+
+/* GraduateTestCheckbox.js */
+
+[type='checkbox'] {
+  margin: 11px 7px -2px 0;
+  appearance: none;
+  border: max(2px, 0.1rem) solid gray;
+  border-radius: 7px;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+[type="checkbox"]:checked {
+  border: 0.33rem solid #008194;
+
+}
+
+
+.ForeignLanguageTestRadio {
+  margin: 0 0 0 -1rem;
 }
