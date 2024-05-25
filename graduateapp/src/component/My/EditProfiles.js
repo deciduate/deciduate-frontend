@@ -4,7 +4,6 @@ import EditMenu from "./EditMenu";
 import MajorDropdown from "./MajorDropdown";
 import { Link } from "react-router-dom";
 
-
 export default function EditInfo() {
 
   const [selectedMajorType, setSelectedMajorType] = useState(null);
