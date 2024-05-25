@@ -24,7 +24,7 @@ export default function ForeignLanguageTestRadio() {
   };
 
   return (
-    <div className={styles.ForeignLanguageTestRadio}>
+    <div className={styles.checkList2}>
       {data?.map((data, key) => (
         <div key={key}>
           <label>

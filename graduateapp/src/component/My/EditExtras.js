@@ -15,11 +15,12 @@ export default function EditInfo() {
         <div className={styles.updateContainer}>
           <div className={styles.majorTest}>
             졸업 시험/ 논문 통과 여부 <br/>
+            <div className={styles.checkList1}>
             <input type="checkbox"
               name="testPass" value="main_test_pass" />본전공 통과 <br/>
             <input type="checkbox"
               name="testPass" value="double_test_pass" />이중전공 통과
-          </div>
+          </div></div>
           <div className={styles.EnglishPass}>
             외국어 인증 점수 보유 및 제출 여부
             <ForeignLanguageTestRadio />

@@ -228,7 +228,7 @@
   background-color: #f4f4f4;
 }
 
-/* CreditInfo.js */
+/* EditCredits.js */
 
 .inputInfo4 {
   display: flex;
@@ -259,7 +259,7 @@
   justify-content: space-between;
 }
 
-/* StudentInputRadio.js */
+/* Radio */
 
 .studentRadio {
   font-family: "Pretendard-Regular";
@@ -267,7 +267,7 @@
 }
 
 [type="radio"] {
-  margin: 11px 7px -2px 1rem;
+  margin: 11px 7px -2px 0;
   appearance: none;
   border: max(2px, 0.1rem) solid gray;
   border-radius: 50%;
@@ -279,40 +279,61 @@
   border: 0.33rem solid #008194;
 }
 
-/* SubjectInputRadio.js */
 
-.subjectRadio {
+/* EditSubjects.js */
+
+.inputInfo6 {
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+}
+
+.subjectContainer {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  width: 400px;
+  height: auto;
+  margin: 2rem 0.7rem;
+  padding: 1rem 2rem;
   font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
-/* SubjectBox.js */
-
-.subjectContainer {
-  display: inline-flex;
-  flex-wrap: nowrap;
-  background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 40px;
-  width: 500px;
-  height: auto;
-  margin: 0 1.8rem 1rem 0;
+.labelStyle {
+  margin: 0 0 0 -1.3rem;
+  padding: 0 2rem 0 0;
 }
 
-/* EtcInfo.js */
+/* EditExtras.js */
+
 .majorTest {
   font-family: "Pretendard-Regular";
-  font-size: 23px;
+  font-size: 20px;
   padding: 1rem;
+  line-height: 2rem;
 }
 
 .EnglishPass {
   font-family: "Pretendard-Regular";
-  font-size: 23px;
+  font-size: 20px;
   padding: 1rem;
+  line-height: 2rem;
 }
 
-/* GraduateTestCheckbox.js */
+.checkList1{
+  font-family: "Pretendard-Regular";
+  font-size: 23px;
+}
+
+.checkList2 {
+  font-family: "Pretendard-Regular";
+  font-size: 23px;
+  margin: 0 0 0 -1rem;
+}
+
+
+/* checkbox */
 
 [type="checkbox"] {
   margin: 11px 7px -2px 0;
@@ -325,8 +346,4 @@
 
 [type="checkbox"]:checked {
   border: 0.33rem solid #008194;
-}
-
-.ForeignLanguageTestRadio {
-  margin: 0 0 0 -1rem;
 }
