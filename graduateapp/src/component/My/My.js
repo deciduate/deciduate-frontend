@@ -12,21 +12,28 @@ export default function My() {
 
   const [message, setMessage] = useState("미등록");
   const [updateState, setUpdateState] = useState("등록하기");
-  const [hasEdited, setHasEdited] = useState(false);
+  const [hasEdited, setHasEdited] = useState(false); // true 면 등록완료-수정하기로 바뀜
+  const [isRegistered, setIsRegistered] = useState(false);
+
+  const handleEdited = () => {
+    setHasEdited(true);
+  };
 
   useEffect(() => {
-    if (hasEdited) {
+    if (isRegistered) {
       setMessage("등록 완료");
       setUpdateState("수정하기");
     } else {
       setMessage("미등록");
       setUpdateState("등록하기");
     }
-  }, [hasEdited]);
+  }, [isRegistered]);
 
-  const handleEdited = () => {
-    setHasEdited(true);
-  };
+  useEffect(() => {
+    if (hasEdited) {
+      setIsRegistered(true);
+    }
+  }, [hasEdited]);
 
   return (
     <div className={styles.page}>
