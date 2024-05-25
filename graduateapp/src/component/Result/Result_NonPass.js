@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../css/Result.module.css";
-import moreInfo from "./moreInfo.png"
+import moreInfo from "./moreInfo.png";
+import FileDownloader from "./FileDownloader";
 
-export default function resultPass() {
+export default function resultNonPass() {
 
   return (
     <div className={styles.page}>
@@ -16,7 +17,7 @@ export default function resultPass() {
 
       </div>
 
-      <span className={styles.moreInfo}>더 많은 정보가 필요하신가요?
+      <span className={styles.moreInfo} onClick={<FileDownloader/>}>더 많은 정보가 필요하신가요?
         <span> <img className={styles.moreInfoPic} src={moreInfo}
         alt="정보 바로가기" /></span></span>
 

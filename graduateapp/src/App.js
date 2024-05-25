@@ -7,9 +7,11 @@ import EditProfiles from "./component/My/EditProfiles";
 import EditCredits from "./component/My/EditCredits";
 import EditSubjects from "./component/My/EditSubjects";
 import EditExtras from "./component/My/EditExtras";
+import resultNonPass from "./component/Result/Result_NonPass";
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -21,6 +23,8 @@ function App() {
         {/* <Loading /> */}
       </Routes>
     </BrowserRouter>
+    <resultNonPass/>
+    </>
   );
 }
 
