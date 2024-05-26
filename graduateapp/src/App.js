@@ -27,7 +27,7 @@ function App() {
           {/* <Loading /> */}
           <Route path="/InsertBasic" element={<InsertBasic />} />
           <Route path="/StepInsert" element={<StepInsert />} />
-          <Route path="/ViewMy" element={<ViewMy />} />
+          <Route path="/MY/ViewMy" element={<ViewMy />} />
         </Routes>
       </BrowserRouter>
     </>
