@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
 
-function Home() {
+function App() {
   return (
     <>
       <div className={styles.navContainer}>
@@ -24,8 +24,8 @@ function Home() {
       </div>
 
       <div>
-      <h1 className={styles.decision}>졸업할 결심</h1>
-      <hr className={styles.horizontalLine}></hr>
+        <h1 className={styles.decision}>졸업할 결심</h1>
+        <hr className={styles.horizontalLine}></hr>
       </div>
 
       <div>
@@ -33,14 +33,37 @@ function Home() {
         <img className={styles.click} src="./Clicks.png" alt="Clicks" />
       </div>
 
-      <div>
-        <button className={styles.firstButton}>
-          <button className={styles.recButton}>
-            <img className={styles.check} src="./Clicking.png" alt="Checks" />
+      <div className={styles.buttonWrapper}>
+
+        <div>
+          <button className={styles.firstButton}>
+            <button className={styles.recButton}>
+              <img className={styles.check} src="./Clicking.png" alt="Checks" />
+            </button>
+            <span className={styles.text}>학점관리가 어려우신 분</span>
           </button>
-          <span className={styles.text}>학점관리가 어려우신 분</span>
-        </button>
+        </div>
+
+        <div>
+          <button className={styles.firstButton}>
+            <button className={styles.recButton}>
+              <img className={styles.check} src="./Clicking.png" alt="Checks" />
+            </button>
+            <span className={styles.text}>졸업이 막막하신 분</span>
+          </button>
+        </div>
+
+        <div>
+          <button className={styles.firstButton}>
+            <button className={styles.recButton}>
+              <img className={styles.check} src="./Clicking.png" alt="Checks" />
+            </button>
+            <span className={styles.text}>졸업요건이 궁금하신 분</span>
+          </button>
+        </div>
+
       </div>
+
     </>
   );
 }
