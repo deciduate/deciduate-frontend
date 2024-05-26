@@ -14,7 +14,10 @@ function Navbar() {
             <img></img>
             <span className={styles.menu}>Link</span>
           </div>
-          <span className={styles.menu}>About</span>
+          <Link to="/About" className={styles.menu}>
+            <span className={styles.menu}>About</span>
+          </Link>
+
           <Link to="/MY" className={styles.menu}>
             <span> MY</span>
           </Link>

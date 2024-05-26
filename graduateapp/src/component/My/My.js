@@ -39,15 +39,24 @@ export default function My() {
   return (
     <div className={styles.page}>
       <span className={styles.cheerUp}>졸업까지 달려봅시다!</span>
-      <div className={styles.infoContainer}
-      style={{margin: "1rem 0 -1rem 0"}}>
-          <div className={styles.infoIndex}
-          style={{fontSize: "35px", color:"#ffffff", padding: "1.2rem 0 0 20px"}}>
-            {infoIndex[0]}</div>
-          <Link to="/MY/ViewMy">
-            <button className={styles.updateAction}>상세보기</button>
-          </Link>
+      <div
+        className={styles.infoContainer}
+        style={{ margin: "1rem 0 -1rem 0" }}
+      >
+        <div
+          className={styles.infoIndex}
+          style={{
+            fontSize: "35px",
+            color: "#ffffff",
+            padding: "1.2rem 0 0 20px",
+          }}
+        >
+          {infoIndex[0]}
         </div>
+        <Link to="/MY/ViewMy">
+          <button className={styles.updateAction}>상세보기</button>
+        </Link>
+      </div>
 
       <div className={styles.infoIndexContainer}>
         <div className={styles.infoContainer}>
