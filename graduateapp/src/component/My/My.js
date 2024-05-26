@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function My() {
   const infoIndex = [
+    "내 정보",
     "기본 정보",
     "취득 학점",
     "수강 과목",
@@ -22,7 +23,7 @@ export default function My() {
   useEffect(() => {
     if (isRegistered) {
       setMessage("등록 완료");
-      setUpdateState("수정하기");
+      setUpdateState("상세 보기");
     } else {
       setMessage("미등록");
       setUpdateState("등록하기");
@@ -38,10 +39,20 @@ export default function My() {
   return (
     <div className={styles.page}>
       <span className={styles.cheerUp}>졸업까지 달려봅시다!</span>
+      <div className={styles.infoContainer}
+      style={{margin: "1rem 0 -1rem 0"}}>
+          <div className={styles.infoIndex}
+          style={{fontSize: "35px", color:"#ffffff", padding: "1.2rem 0 0 20px"}}>
+            {infoIndex[0]}</div>
+          <Link to="/MY/ViewMy">
+            <button className={styles.updateAction}>상세보기</button>
+          </Link>
+        </div>
+
       <div className={styles.infoIndexContainer}>
         <div className={styles.infoContainer}>
           <div className={styles.infoIndex}>
-            {infoIndex[0]} <br />
+            {infoIndex[1]} <br />
             <span
               className={hasEdited ? styles.updateState : styles.updatedState}
             >
@@ -54,9 +65,10 @@ export default function My() {
             </button>
           </Link>
         </div>
+
         <div className={styles.infoContainer}>
           <div className={styles.infoIndex}>
-            {infoIndex[1]} <br />
+            {infoIndex[2]} <br />
             <span
               className={hasEdited ? styles.updateState : styles.updatedState}
             >
@@ -69,7 +81,7 @@ export default function My() {
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.infoIndex}>
-            {infoIndex[2]} <br />
+            {infoIndex[3]} <br />
             <span
               className={hasEdited ? styles.updateState : styles.updatedState}
             >
@@ -82,7 +94,7 @@ export default function My() {
         </div>
         <div className={styles.infoContainer}>
           <div className={styles.infoIndex}>
-            {infoIndex[3]} <br />
+            {infoIndex[4]} <br />
             <span
               className={hasEdited ? styles.updateState : styles.updatedState}
             >
