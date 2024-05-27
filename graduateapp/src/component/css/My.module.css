@@ -20,6 +20,7 @@
   font-family: "Pretendard-Medium";
   font-size: 30px;
   padding: 0 0 2rem 0;
+  font-weight: 500;
 }
 
 .infoIndexContainer {
@@ -280,7 +281,6 @@
   border: 0.33rem solid #008194;
 }
 
-
 /* EditSubjects.js */
 
 .inputInfo6 {
@@ -333,7 +333,6 @@
   margin: 0 0 0 -1rem;
 }
 
-
 /* checkbox */
 
 [type="checkbox"] {
@@ -349,7 +348,6 @@
   border: 0.33rem solid #008194;
 }
 
-
 /* ViewProfiles.js */
 
 .inputInfo9 {
@@ -363,7 +361,6 @@
   font-size: 21px;
   padding: 1rem;
 }
-
 
 .viewInfo {
   margin: 11px 0 0 0;
@@ -392,7 +389,6 @@
   padding: 15px 0 0 20px;
   margin: 5px 2px 0 0;
 }
-
 
 .subjectContainer2 {
   /* background-color: #f4f4f4;
@@ -435,7 +431,8 @@
   font-size: 20px;
 }
 
-.Box , .content {
+.Box,
+.content {
   display: flex;
   flex-direction: column;
   width: 5rem;
@@ -467,7 +464,8 @@
   background-color: #f3f5f7;
 }
 
-th , td{
+th,
+td {
   padding: 0 0.5rem;
   justify-items: center;
   text-align: center;

@@ -1,5 +1,11 @@
 /* Result_Pass.js */
-
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
 }
@@ -16,7 +22,7 @@
 .passTitle {
   font-family: "Pretendard-Extrabold";
   font-size: 50px;
-  letter-spacing: 150%;
+  /* letter-spacing: 150%; */
   margin: 15px;
 }
 
@@ -27,10 +33,9 @@
 
 .passSubTitle {
   font-family: "Pretendard-Medium";
-  letter-spacing: 130%;
+  /* letter-spacing: 130%; */
   font-size: 30px;
 }
-
 
 /* Result_NonPass.js */
 
@@ -45,14 +50,13 @@
 }
 
 .cheerUp {
-  font-family: 'Pretendard-Medium';
+  font-family: "Pretendard-Medium";
   font-size: 30px;
   padding: 0 0 1rem 0;
 }
 
-
 .resultContainer {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 23px;
   padding: 1rem;
   text-wrap: nowrap;
@@ -67,7 +71,7 @@
   height: 10px;
 }
 
-.resultContainer::-webkit-scrollbar-thumb{
+.resultContainer::-webkit-scrollbar-thumb {
   border: none;
 }
 
@@ -78,7 +82,7 @@
 .specificResultContainer {
   display: inline-block;
   /* flex-wrap: nowrap; */
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 40px;
   width: 270px;
@@ -88,7 +92,7 @@
 
 .needThisTitle {
   margin: 0;
-  padding:2rem 2rem;
+  padding: 2rem 2rem;
   font-family: "Pretendard-Medium";
   font-size: 33px;
   position: relative;
@@ -100,18 +104,18 @@
 }
 
 .moreInfoButton {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   margin: 0.5rem 0 0 0;
   /* position: fixed;
   bottom: 1rem; */
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 17px;
 }
 
-.moreInfo:hover{
+.moreInfo:hover {
   cursor: pointer;
   background-color: #333333;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .moreInfoPic {
@@ -121,7 +125,7 @@
 
 .moreInfoList {
   list-style-type: none;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 17px;
   line-height: 1.3rem;
 }
@@ -134,30 +138,30 @@
   text-decoration-line: none;
   color: black;
   font-weight: bold;
-  background-color: #D9D9D9;
-  letter-spacing: 1px;
+  background-color: #d9d9d9;
+  /* letter-spacing: 1px; */
 }
 
 .linkStyle2 {
   text-decoration-line: none;
   color: black;
   font-weight: bold;
-  background-color: #D9D9D9;
-  letter-spacing: 1px;
+  background-color: #d9d9d9;
+  /* letter-spacing: 1px; */
 }
 
 .modalOpen {
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 17px;
   border: none;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
 
 .modalCloseButton {
   float: left;
   border: none;
   background-color: white;
-  font-family: 'Pretendard-Regular';
+  font-family: "Pretendard-Regular";
   font-size: 20px;
 }
 
