@@ -6,7 +6,14 @@
 .page {
   padding: 5rem 7rem 0 7rem;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.pageSub {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
@@ -43,12 +50,17 @@
   margin: 0 0 0.5rem 0;
   padding: 1rem;
 }
+.infocontainer:hover {
+  background-color: #333333;
+}
 
 .infoIndex {
   padding: 0 0 0 20px;
   max-width: fit-content;
   position: absolute;
   float: left;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .updateState {
@@ -61,7 +73,7 @@
 
 .updateAction {
   font-family: "Pretendard-Regular";
-  font-size: 23px;
+  font-size: 18px;
   color: #ffffff;
   text-align: center;
   width: 121px;
@@ -128,7 +140,7 @@
   width: 750px;
   height: auto;
   font-family: "Pretendard-Regular";
-  font-size: 23px;
+  font-size: 18px;
   margin-bottom: 3rem;
 
   position: relative;
@@ -397,7 +409,7 @@
   width: 250px;
   height: auto;
   margin: 0 0.7rem 0 1rem;
-  padding: 1rem 2rem 0 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   font-family: "Pretendard-Regular";
   font-size: 20px;
   display: inline-flex;
@@ -411,7 +423,7 @@
   width: 250px;
   height: auto;
   margin: 0 0.7rem 0 3rem;
-  padding: 1rem 2rem 0 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   font-family: "Pretendard-Regular";
   font-size: 20px;
   display: inline-flex;
@@ -420,12 +432,10 @@
 
 .labelIndex {
   padding: 1rem 10rem 0 1rem;
-  font-size: 20px;
 }
 
 .labelIndex2 {
   padding: 1rem 10rem 0 2rem;
-  font-size: 20px;
 }
 
 .inputInfo8 {

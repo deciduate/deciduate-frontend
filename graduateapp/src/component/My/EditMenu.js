@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "../css/My.module.css";
+import EditNav from "../Header/EditNav";
 
 export default function UpdateInfo() {
   const location = useLocation();
@@ -12,9 +13,9 @@ export default function UpdateInfo() {
 
   return (
     <>
-      <div className={styles.cheerUp2}>
+      {/* <div className={styles.cheerUp2}>
         수정을 완료하면 정확한 결과를 알 수 있어요
-      </div>
+      </div> */}
       <div className={styles.updateInfoMenu}>
         <div className={styles.indexContainer}>
           <Link to="/MY/EditProfiles">
