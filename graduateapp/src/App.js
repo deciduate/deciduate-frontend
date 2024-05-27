@@ -13,14 +13,15 @@ import EditCredits from "./component/My/EditCredits";
 import EditSubjects from "./component/My/EditSubjects";
 import EditExtras from "./component/My/EditExtras";
 
-import ViewMy from './component/My/ViewMy';
-import Result_NonPass from './component/Result/Result_NonPass';
-// import Result_Pass from './component/Result/Result_Pass';
+import ViewMy from "./component/My/ViewMy";
+import Result_NonPass from "./component/Result/Result_NonPass";
+import Result_Pass from "./component/Result/Result_Pass";
 
+import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -32,15 +33,15 @@ function App() {
           <Route path="/MY/EditCredits" element={<EditCredits />} />
           <Route path="/MY/EditSubjects" element={<EditSubjects />} />
           <Route path="/MY/EditExtras" element={<EditExtras />} />
-          {/* <Route path="/MY/Loading" element={<Loading />} /> */}
+          <Route path="/MY/Loading" element={<Loading />} />
           <Route path="/InsertBasic" element={<InsertBasic />} />
           <Route path="/StepInsert" element={<StepInsert />} />
           <Route path="/MY/ViewMy" element={<ViewMy />} />
-          <Route path='/MY/Result_NonPass' element={<Result_NonPass/>}/>
-          {/* <Route path='/MY/Result_Pass' element={<Result_Pass/>}/> */}
+          <Route path="/MY/Result_NonPass" element={<Result_NonPass />} />
+          <Route path="/MY/Result_Pass" element={<Result_Pass />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
