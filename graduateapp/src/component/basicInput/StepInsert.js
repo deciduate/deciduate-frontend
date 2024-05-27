@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "../css/StepInsert.module.css";
 import creditImg from "../img/credit.svg";
+import InsertNav from "../Header/InserNav";
 
 function StepInsert() {
   const [majorValue, setMajorValue] = useState("");
@@ -58,6 +59,7 @@ function StepInsert() {
 
   return (
     <>
+      <InsertNav />
       <div className={styles.Container}>
         {/* step1 */}
         <div className={styles.step}>

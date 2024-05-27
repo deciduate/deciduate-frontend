@@ -1,0 +1,24 @@
+.Container {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}
+.InsertTitle {
+  display: flex;
+  font-size: 24px;
+  font-weight: bold;
+  justify-content: flex-start;
+  color: #4e5968;
+}
+.InsertSubTitleDiv {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px;
+}
+.SubTitle {
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  color: #4e5968;
+  text-decoration: none;
+}
