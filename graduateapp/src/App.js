@@ -11,6 +11,8 @@ import EditCredits from "./component/My/EditCredits";
 import EditSubjects from "./component/My/EditSubjects";
 import EditExtras from "./component/My/EditExtras";
 import ViewMy from './component/My/ViewMy';
+import Result_NonPass from './component/Result/Result_NonPass';
+import Result_Pass from './component/Result/Result_Pass';
 
 function App() {
   return (
@@ -24,10 +26,12 @@ function App() {
           <Route path="/MY/EditCredits" element={<EditCredits />} />
           <Route path="/MY/EditSubjects" element={<EditSubjects />} />
           <Route path="/MY/EditExtras" element={<EditExtras />} />
-          {/* <Loading /> */}
+          {/* <Route path="/MY/Loading" element={<Loading />} /> */}
           <Route path="/InsertBasic" element={<InsertBasic />} />
           <Route path="/StepInsert" element={<StepInsert />} />
           <Route path="/MY/ViewMy" element={<ViewMy />} />
+          <Route path='/MY/Result_NonPass' element={<Result_NonPass/>}/>
+          <Route path='/MY/Result_Pass' element={<Result_Pass/>}/>
         </Routes>
       </BrowserRouter>
     </>

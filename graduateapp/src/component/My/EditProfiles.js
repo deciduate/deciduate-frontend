@@ -87,7 +87,7 @@ export default function EditInfo() {
             <input type="radio"
               name="entrance" value="foreignerType" />외국인 전형 입학자
             <input type="radio"
-              name="entrance" value="none" defaultchecked/>해당 없음
+              name="entrance" value="none" defaultChecked/>해당 없음
           </div> <br />
           <Link to="/MY"><button className={styles.Completed}>수정 완료하기</button></Link>
         </div>

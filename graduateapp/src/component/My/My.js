@@ -42,7 +42,7 @@ export default function My() {
       <div className={styles.infoContainer}
       style={{margin: "1rem 0 -1rem 0"}}>
           <div className={styles.infoIndex}
-          style={{fontSize: "35px", color:"#ffffff", padding: "1.2rem 0 0 20px"}}>
+          style={{fontSize: "33px", color:"#ffffff", padding: "1.2rem 0 0 20px"}}>
             {infoIndex[0]}</div>
           <Link to="/MY/ViewMy">
             <button className={styles.updateAction}>상세보기</button>
@@ -54,7 +54,7 @@ export default function My() {
           <div className={styles.infoIndex}>
             {infoIndex[1]} <br />
             <span
-              className={hasEdited ? styles.updateState : styles.updatedState}
+              className={hasEdited ? styles.updatedState : styles.updateState}
             >
               {message}
             </span>
@@ -70,7 +70,7 @@ export default function My() {
           <div className={styles.infoIndex}>
             {infoIndex[2]} <br />
             <span
-              className={hasEdited ? styles.updateState : styles.updatedState}
+              className={hasEdited ? styles.updatedState : styles.updateState}
             >
               {message}
             </span>
@@ -83,7 +83,7 @@ export default function My() {
           <div className={styles.infoIndex}>
             {infoIndex[3]} <br />
             <span
-              className={hasEdited ? styles.updateState : styles.updatedState}
+              className={hasEdited ? styles.updatedState : styles.updateState}
             >
               {message}
             </span>
@@ -96,7 +96,7 @@ export default function My() {
           <div className={styles.infoIndex}>
             {infoIndex[4]} <br />
             <span
-              className={hasEdited ? styles.updateState : styles.updatedState}
+              className={hasEdited ? styles.updatedState : styles.updateState}
             >
               {message}
             </span>
