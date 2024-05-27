@@ -9,6 +9,7 @@ import Gradcap from "../img/Gradcap.png";
 import logoz from "../img/logoz.png";
 import SymbolN from "../img/SymbolN.gif";
 import White_logo from "../img/White_logo.png";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -21,9 +22,11 @@ function Home() {
       <div>
         <h1 className={styles.decision}>졸업할 결심</h1>
         <hr className={styles.horizontalLine}></hr>
+        <h1 className={styles.decision}>졸업할 결심</h1>
+        <hr className={styles.horizontalLine}></hr>
       </div>
       <div>
-        <button className={styles.biggerButton}>졸업 요건 확인하기</button>
+        <Link to="/Login"><button className={styles.biggerButton}>졸업 요건 확인하기</button></Link>
         <img className={styles.click} src={Clicks} alt="Clicks" />
       </div>
       <div className={styles.buttonWrapper}>

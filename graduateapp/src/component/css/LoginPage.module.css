@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* body {
   background-color: #002d56;
   margin: 0;
@@ -20,17 +21,21 @@
   height: 50px;
   padding: 0 20px;
 }
+
 .logo {
   display: flex;
   align-items: center;
 }
+
 .menuDiv {
   display: flex;
   align-items: center;
 }
+
 .menu {
   margin: 0 10px;
 }
+
 .container {
   flex: 1;
   display: flex;
@@ -38,6 +43,7 @@
   align-items: center;
   height: calc(100vh - 50px);
 }
+
 .HugeButton {
   background-color: white;
   border-radius: 10px;
@@ -50,44 +56,79 @@
   height: 503px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .loginLogo {
-  width: 80px;
+  width: 90px;
   height: auto;
-  margin-top: 120px;
+  margin: 90px 0 5px 0;
 }
+
 .LoginText {
   margin: 10px 0;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bolder;
-  margin-top: 20px;
+  margin: 10px 0 20px 0;
   color: #142c46;
 }
+
 .Signing {
+  position: relative; 
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px 60px;
+  align-items: center; 
+  padding: 20px 70px;
   border: 1px solid #ddd;
   border-radius: 30px;
   background-color: white;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 10px 0 20px 0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 .google {
-  width: 40px;
+  position: absolute; 
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%); 
   height: 40px;
-  margin-right: 10px;
 }
+
 .signText {
   font-size: 20px;
+  align-items: center;
+  margin-left: 0 0 0 50px;
+  font-weight: bolder;
 }
+
 .checkboxContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start; 
   margin-bottom: 20px;
 }
+
 .checkboxContainer label {
   display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.checkboxContainer input {
+  margin-right: 10px;
+  vertical-align: bottom;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.Follow {
+  color: white;
 }

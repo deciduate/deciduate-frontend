@@ -25,24 +25,27 @@
   margin: 10px;
 }
 .imageContainer {
-  position: relative;
+  position: absolute;
   display: inline-block;
+  margin-left: 5%;
 }
 .image {
   display: block;
   width: 100%;
-  margin-top: 40px;
+  margin-top: 90px;
 }
+
 .capImage {
   position: absolute;
-  top: 39%;
+  top: 44%;
   left: 57%;
   transform: translate(-50%, 0);
   width: 10%;
 }
+
 .text {
   position: absolute;
-  top: 10.5%;
+  top: 18%;
   left: 57.5%;
   transform: translate(-50%, 0);
   color: #002d56;
@@ -50,6 +53,7 @@
   font-size: 40px;
   margin: 0;
 }
+
 .biggerButton {
   padding: 20px 40px;
   background-color: #002d56;
@@ -70,21 +74,34 @@
   transform: translate(-50%, -50%);
   position: absolute;
 }
-.buttonContainer {
-  position: relative;
-}
-.sentenceContainer {
-  position: absolute;
-  top: 260px;
-  right: 0;
-  text-align: center;
-}
+
 .textContainer {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-wrap: 20px;
+  white-space: normal;
+  width: 29vw;
+  margin-left: 50%;
+  margin-top: 18%;
+  font-weight: bolder;
+  font-size: 20px;
 }
-.leftPart,
-.rightPart {
-  width: 100%;
+
+.stextContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  word-wrap: break-word;
+  white-space: normal;
+  width: 27vw;
+  margin-left: 50%;
+  margin-top: 24%;
+}
+
+.stextContainer span {
+  margin-bottom: 1em; 
 }
