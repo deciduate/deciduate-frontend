@@ -10,25 +10,30 @@ export default function My() {
     "수강 과목",
     "졸업 시험/논문 | 외국어 인증",
   ];
-
+  //초기상태(미등록/등록하기) isRegistered, isEditing 둘다 false
   const [message, setMessage] = useState("미등록");
   const [updateState, setUpdateState] = useState("등록하기");
-  const [hasEdited, setHasEdited] = useState(false); // true 면 등록완료-수정하기로 바뀜
-  const [isRegistered, setIsRegistered] = useState(false);
+  const [hasEdited, setHasEdited] = useState(false);
+  const [isRegistered, setIsRegistered] = useState(false); //등록완료(등록완료/상세보기) isRegistered이 true
+  const [isEditing, setIsEditing] = useState(false); //수정중(수정중/수정하기) isEditing이 true 일때
 
   const handleEdited = () => {
     setHasEdited(true);
+    setIsEditing(true);
   };
 
   useEffect(() => {
-    if (isRegistered) {
+    if (isRegistered && !isEditing) {
       setMessage("등록 완료");
       setUpdateState("상세 보기");
+    } else if (isEditing) {
+      setMessage("수정 중");
+      setUpdateState("수정하기");
     } else {
       setMessage("미등록");
       setUpdateState("등록하기");
     }
-  }, [isRegistered]);
+  }, [isRegistered, isEditing]);
 
   useEffect(() => {
     if (hasEdited) {
