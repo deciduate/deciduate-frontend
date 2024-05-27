@@ -33,7 +33,7 @@ function App() {
           <Route path="/InsertBasic" element={<InsertBasic />} />
           <Route path="/StepInsert" element={<StepInsert />} />
           <Route path="/MY/ViewMy" element={<ViewMy />} />
-          <Route path="MY/Result_NonPass" element={<Result_NonPass />} />
+          <Route path="/MY/Result_NonPass" element={<Result_NonPass />} />
         </Routes>
       </BrowserRouter>
     </>
