@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../css/My.module.css";
 import { Link } from "react-router-dom";
+import EditNav from "../Header/EditNav";
 
 export default function My() {
   const infoIndex = [
@@ -42,84 +43,88 @@ export default function My() {
   }, [hasEdited]);
 
   return (
-    <div className={styles.page}>
-      <span className={styles.cheerUp}>졸업까지 달려봅시다!</span>
-      <div
-        className={styles.infoContainer}
-        style={{ margin: "1rem 0 -1rem 0" }}
-      >
+    <>
+      <div className={styles.page}>
+        <EditNav />
+        {/* <span className={styles.cheerUp}>졸업까지 달려봅시다!</span> */}
         <div
-          className={styles.infoIndex}
-          style={{
-            fontSize: "33px",
-            color: "#ffffff",
-            padding: "1.2rem 0 0 20px",
-          }}
+          className={styles.infoContainer}
+          style={{ margin: "1rem 0 -1rem 0" }}
         >
-          {infoIndex[0]}
-        </div>
-        <Link to="/MY/ViewMy">
-          <button className={styles.updateAction}>상세보기</button>
-        </Link>
-      </div>
-
-      <div className={styles.infoIndexContainer}>
-        <div className={styles.infoContainer}>
-          <div className={styles.infoIndex}>
-            {infoIndex[1]} <br />
-            <span
-              className={hasEdited ? styles.updatedState : styles.updateState}
-            >
-              {message}
-            </span>
+          <div
+            className={styles.infoIndex}
+            style={{
+              fontSize: "18px",
+              color: "#ffffff",
+              padding: "1.2rem 0 0 20px",
+              fontweight: "bold",
+            }}
+          >
+            {infoIndex[0]}
           </div>
-          <Link to="/MY/EditProfiles">
-            <button onClick={handleEdited} className={styles.updateAction}>
-              {updateState}
-            </button>
+          <Link to="/MY/ViewMy">
+            <button className={styles.updateAction}>상세보기</button>
           </Link>
         </div>
 
-        <div className={styles.infoContainer}>
-          <div className={styles.infoIndex}>
-            {infoIndex[2]} <br />
-            <span
-              className={hasEdited ? styles.updatedState : styles.updateState}
-            >
-              {message}
-            </span>
+        <div className={styles.infoIndexContainer}>
+          <div className={styles.infoContainer}>
+            <div className={styles.infoIndex}>
+              {infoIndex[1]} <br />
+              <span
+                className={hasEdited ? styles.updatedState : styles.updateState}
+              >
+                {message}
+              </span>
+            </div>
+            <Link to="/MY/EditProfiles">
+              <button onClick={handleEdited} className={styles.updateAction}>
+                {updateState}
+              </button>
+            </Link>
           </div>
-          <Link to="/MY/EditCredits">
-            <button className={styles.updateAction}>{updateState}</button>
-          </Link>
-        </div>
-        <div className={styles.infoContainer}>
-          <div className={styles.infoIndex}>
-            {infoIndex[3]} <br />
-            <span
-              className={hasEdited ? styles.updatedState : styles.updateState}
-            >
-              {message}
-            </span>
+
+          <div className={styles.infoContainer}>
+            <div className={styles.infoIndex}>
+              {infoIndex[2]} <br />
+              <span
+                className={hasEdited ? styles.updatedState : styles.updateState}
+              >
+                {message}
+              </span>
+            </div>
+            <Link to="/MY/EditCredits">
+              <button className={styles.updateAction}>{updateState}</button>
+            </Link>
           </div>
-          <Link to="/MY/EditSubjects">
-            <button className={styles.updateAction}>{updateState}</button>
-          </Link>
-        </div>
-        <div className={styles.infoContainer}>
-          <div className={styles.infoIndex}>
-            {infoIndex[4]} <br />
-            <span
-              className={hasEdited ? styles.updatedState : styles.updateState}
-            >
-              {message}
-            </span>
+          <div className={styles.infoContainer}>
+            <div className={styles.infoIndex}>
+              {infoIndex[3]} <br />
+              <span
+                className={hasEdited ? styles.updatedState : styles.updateState}
+              >
+                {message}
+              </span>
+            </div>
+            <Link to="/MY/EditSubjects">
+              <button className={styles.updateAction}>{updateState}</button>
+            </Link>
           </div>
-          <Link to="/MY/EditExtras">
-            <button className={styles.updateAction}>{updateState}</button>
-          </Link>
+          <div className={styles.infoContainer}>
+            <div className={styles.infoIndex}>
+              {infoIndex[4]} <br />
+              <span
+                className={hasEdited ? styles.updatedState : styles.updateState}
+              >
+                {message}
+              </span>
+            </div>
+            <Link to="/MY/EditExtras">
+              <button className={styles.updateAction}>{updateState}</button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
