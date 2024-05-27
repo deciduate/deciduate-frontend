@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #002d56;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+}
+.logo {
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.menuDiv {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.menu {
+  margin: 10px;
+}
+.imageContainer {
+  position: relative;
+  display: inline-block;
+}
+.image {
+  display: block;
+  width: 100%;
+  margin-top: 40px;
+}
+.capImage {
+  position: absolute;
+  top: 39%;
+  left: 57%;
+  transform: translate(-50%, 0);
+  width: 10%;
+}
+.text {
+  position: absolute;
+  top: 10.5%;
+  left: 57.5%;
+  transform: translate(-50%, 0);
+  color: #002d56;
+  font-weight: bolder;
+  font-size: 40px;
+  margin: 0;
+}
+.biggerButton {
+  padding: 20px 40px;
+  background-color: #002d56;
+  border-radius: 20px;
+  position: absolute;
+  top: 85%;
+  right: 5%;
+  font-weight: bolder;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.click {
+  width: 30px;
+  height: auto;
+  bottom: 2%;
+  right: 2.5%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.buttonContainer {
+  position: relative;
+}
+.sentenceContainer {
+  position: absolute;
+  top: 260px;
+  right: 0;
+  text-align: center;
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leftPart,
+.rightPart {
+  width: 100%;
+}
