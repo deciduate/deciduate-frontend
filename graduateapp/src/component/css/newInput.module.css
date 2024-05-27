@@ -21,15 +21,15 @@
   font-size: 15px;
   padding: 6px 7px 6px 0;
   color: #4E5968;
-  margin: 0 0 10px 0;
 }
 
 .inputStudent_no {
-  width: 718px;
+  width: 50rem;
   height: 48px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 0 18px;
+  font-size: 20px;
 }
 
 .major_type {
@@ -62,7 +62,7 @@ li {
 }
 
 .dropdown {
-  width: 718px;
+  width: 60%;
   height: 48px;
   border: 1px solid black;
   border-radius: 5px;

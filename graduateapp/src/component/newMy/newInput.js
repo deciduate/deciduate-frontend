@@ -3,6 +3,7 @@ import styles from "../css/newInput.module.css";
 import MajorDropdown from "./MajorDropdown";
 
 
+
 export default function NewInput() {
 
   const [selectedMajorType, setSelectedMajorType] = useState(null);
@@ -25,7 +26,7 @@ export default function NewInput() {
             type="number"
             maxlength={2}
             className={styles.inputStudent_no} /> </label>
-        </div>
+        </div><br />
 
         <div className={styles.major_type}>
           <span className={styles.indexMajor_type}> 전공유형 </span> <br />
@@ -51,28 +52,22 @@ export default function NewInput() {
               checked={selectedMajorType === 4}
               onChange={() => setSelectedMajorType(4)} /> <span className={styles.selectMajor_type}>전공심화+부전공</span></li>
           </ul>
-        </div>
+        </div><br />
 
 
 
         <div className={styles.etcInfo}>
           기타사항 <br />
           <ul>
-            <li><input
-              type="radio"
-              className={styles.etcInfo_type} value={1}
-              checked={selectedMajorType === 1}
-              /> <span className={styles.etcInfo_type}>편입생</span></li>
-            <li><input
-              type="radio"
-              className={styles.etcInfo_type} value={2}
-              checked={selectedMajorType === 2}
-              /> <span className={styles.etcInfo_type}>외국인 입학 전형자</span></li>
-            <li><input
-              type="radio"
-              className={styles.etcInfo_type} value={3}
-              checked={selectedMajorType === 3}
-              defaultChecked /> <span className={styles.etcInfo_type}>해당 없음</span></li>
+            <li><input type="radio"
+            className={styles.etcInfo_type} 
+              name="entrance" value="Transfer" /><span className={styles.etcInfo_type} >편입생</span></li>
+            <li><input type="radio"
+            className={styles.etcInfo_type} 
+              name="entrance" value="foreignerType" /><span className={styles.etcInfo_type} >외국인 입학 전형자</span></li>
+            <li><input type="radio"
+            className={styles.etcInfo_type} 
+              name="entrance" value="none" defaultChecked/><span className={styles.etcInfo_type} >해당 없음</span></li>
           </ul>
         </div>
 
