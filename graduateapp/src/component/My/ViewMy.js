@@ -2,8 +2,11 @@ import React from "react";
 import styles from "../css/My.module.css";
 import CreditTable from "./CreditTable";
 import {Link} from "react-router-dom";
+import axios from 'axios'; 
 
 export default function EditInfo() {
+
+  
 
   return (
     <div className={styles.page}>
