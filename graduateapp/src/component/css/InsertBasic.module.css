@@ -21,23 +21,21 @@
   text-align: center;
 }
 
-
 .InsertSubContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  border: 2px solid black;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .updateContainer {
   margin: 4rem auto;
 }
 
-
 .inputInfo {
- margin: 2rem 2rem 1rem 1rem;
+  margin: 2rem 2rem 1rem 1rem;
 }
 
 .inputInfo3 {
@@ -62,7 +60,6 @@
   font-size: 20px;
 }
 
-
 .text {
   font-size: 14px;
   color: #ff0000;
@@ -85,7 +82,6 @@ input[type="radio"] {
 input[type="radio"] + label {
   display: inline-block;
 }
-
 
 .dropdown2 {
   width: 300px;
@@ -128,7 +124,6 @@ input[type="radio"] + label {
 .dropdownItems2 :hover {
   background-color: #f4f4f4;
 }
-
 
 .Completed {
   width: 136px;
