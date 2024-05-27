@@ -1,51 +1,38 @@
-import React from "react";
+import React from 'react';
 import styles from "../css/My.module.css";
 
-export default function Table() {
-
+function Table() {
   return (
-
-    <div className={styles.BoxContainer}>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>1전공</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>이중전공</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>2전공</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>실외</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>교양</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>부전공</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>교직</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>자선</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>총취득</div>
-        <input type="number" className={styles.content}></input>
-      </div>
-      <div className={styles.Box}>
-        <div className={styles.contentTitle}>총평점</div>
-        <input type="number" className={styles.content}></input>
-      </div></div>
-
-  )
+    <table className={styles.CreditTable}>
+      <tbody>
+        <tr style={{fontFamily: "Pretendard-Regular", fontSize: "20px"}}>
+          <th>1전공</th>
+          <th>이중전공</th>
+          <th>2전공</th>
+          <th>실외</th>
+          <th>교양</th>
+          <th>부전공</th>
+          <th>교직</th>
+          <th>자선</th>
+          <th>총취득</th>
+          <th>총평점</th>
+        </tr>
+        <tr style={{fontFamily: "Pretendard-Regular", fontSize: "20px"}}>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  );
 }
+
+export default Table;
+

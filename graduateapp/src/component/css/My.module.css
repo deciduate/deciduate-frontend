@@ -167,6 +167,7 @@
   height: 50px;
   font-family: "Pretendard-Regular";
   font-size: 20px;
+  margin: 7px 0 0 0;
 }
 
 .Completed {
@@ -291,7 +292,7 @@
 .subjectContainer {
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 40px;
+  border-radius: 20px;
   width: 400px;
   height: auto;
   margin: 2rem 0.7rem;
@@ -351,6 +352,12 @@
 
 /* ViewProfiles.js */
 
+.inputInfo9 {
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+  padding: 1rem 0 0 0;
+}
+
 .viewValue {
   font-family: "Pretendard-Medium";
   font-size: 21px;
@@ -388,13 +395,13 @@
 
 
 .subjectContainer2 {
-  background-color: #ffffff;
+  /* background-color: #f4f4f4;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 20px;
+  border-radius: 15px; */
   width: 250px;
   height: auto;
-  margin: 2rem 0.7rem 2rem 0;
-  padding: 1rem 2rem;
+  margin: 0 0.7rem 0 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   font-family: "Pretendard-Regular";
   font-size: 20px;
   display: inline-flex;
@@ -402,13 +409,13 @@
 }
 
 .subjectContainer3 {
-  background-color: #ffffff;
+  /* background-color: #f4f4f4;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 20px;
+  border-radius: 15px; */
   width: 250px;
   height: auto;
-  margin: 2rem 2rem;
-  padding: 1rem 2rem;
+  margin: 0 0.7rem 0 3rem;
+  padding: 1rem 2rem 1rem 1rem;
   font-family: "Pretendard-Regular";
   font-size: 20px;
   display: inline-flex;
@@ -416,7 +423,7 @@
 }
 
 .labelIndex {
-  padding: 1rem 10rem 0 0;
+  padding: 1rem 10rem 0 1rem;
 }
 
 .labelIndex2 {
@@ -424,7 +431,7 @@
 }
 
 .inputInfo8 {
-  padding: 1rem 0 0 0;
+  padding: 1rem 0 0 1rem;
   font-size: 20px;
 }
 
@@ -458,4 +465,16 @@
   border: solid 0px;
   border-radius: 10px;
   background-color: #f3f5f7;
+}
+
+th , td{
+  padding: 0 0.5rem;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+}
+
+.CreditTable {
+  border-spacing: 1.5px;
+  /* border: 1px solid #000000 ; */
 }
