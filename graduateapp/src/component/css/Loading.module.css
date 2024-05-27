@@ -2,26 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 15rem;
 }
 
 .loadingTitle {
   font-family: "Pretendard-Extrabold";
-  font-size: x-large;
-  letter-spacing: 5px;
+  font-size: 50px;
+  letter-spacing: 130%;
   margin: 15px;
 }
 
 .loadingSubTitle {
   font-family: "Pretendard-Medium";
-  font-weight: lighter;
-  font-size: small;
-  letter-spacing: 3px;
+  letter-spacing: 130%;
+  font-size: 30px;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 7px; */
 }

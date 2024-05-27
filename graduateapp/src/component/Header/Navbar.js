@@ -6,14 +6,21 @@ function Navbar() {
   return (
     <>
       <div className={styles.navContainer}>
-        <div className={styles.logo}>졸업할 결심</div>
+        <Link to="/" className={styles.logo}>
+          <div>졸업할 결심</div>
+        </Link>
         <div className={styles.menuDiv}>
           <div className={styles.menu}>
             <img></img>
             <span className={styles.menu}>Link</span>
           </div>
-          <span className={styles.menu}>About</span>
-          <span className={styles.menu}>MY</span>
+          <Link to="/About" className={styles.menu}>
+            <span className={styles.menu}>About</span>
+          </Link>
+
+          <Link to="/MY" className={styles.menu}>
+            <span> MY</span>
+          </Link>
         </div>
       </div>
     </>

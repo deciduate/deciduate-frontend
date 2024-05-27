@@ -1,0 +1,140 @@
+/* Result_Pass.js */
+
+* {
+  box-sizing: border-box;
+}
+
+.congrat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 15rem;
+}
+
+.passTitle {
+  font-family: "Pretendard-Extrabold";
+  font-size: 50px;
+  letter-spacing: 150%;
+  margin: 15px;
+}
+
+.congratPic {
+  width: 65px;
+  vertical-align: bottom;
+}
+
+.passSubTitle {
+  font-family: "Pretendard-Medium";
+  letter-spacing: 130%;
+  font-size: 30px;
+}
+
+
+/* Result_NonPass.js */
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  padding: 0.7rem 10rem 4rem 10rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.cheerUp {
+  font-family: 'Pretendard-Medium';
+  font-size: 30px;
+  padding: 0 0 1rem 0;
+}
+
+
+.resultContainer {
+  font-family: 'Pretendard-Regular';
+  font-size: 23px;
+  padding: 1rem;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: scroll auto;
+  margin: 0 -2rem;
+  justify-content: center;
+}
+
+.resultContainer::-webkit-scrollbar {
+  width: 50px;
+  height: 10px;
+}
+
+.resultContainer::-webkit-scrollbar-thumb{
+  border: none;
+}
+
+/* .resultContainer::-webkit-scrollbar-thumb:hover {
+	background-color:#a0a0a5;
+} */
+
+.specificResultContainer {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  background-color: #FFFFFF;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  width: 275px;
+  min-height: 390px;
+  margin: 0 1.4rem 0 0;
+}
+
+.moreInfoButton {
+  background-color: #D9D9D9;
+  margin: 0.5rem 0 0 0;
+  /* position: fixed;
+  bottom: 1rem; */
+  font-family: 'Pretendard-Regular';
+  font-size: 17px;
+}
+
+.moreInfo:hover{
+  cursor: pointer;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+
+.moreInfoPic {
+  width: 20px;
+  vertical-align: bottom;
+}
+
+.moreInfoList {
+  list-style-type: none;
+  font-family: 'Pretendard-Regular';
+  font-size: 17px;
+  line-height: 1.3rem;
+}
+
+.ListContainer {
+  background-color: #D9D9D9; 
+}
+
+.modalOpen {
+  font-family: 'Pretendard-Regular';
+  font-size: 17px;
+  border: none;
+  background-color: #D9D9D9;
+}
+
+.modalCloseButton {
+  float: left;
+  border: none;
+  background-color: white;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+}
+
+.fullscreenImage {
+  width: 700px;
+  object-fit: cover;
+  display: inline-block;
+}
+
