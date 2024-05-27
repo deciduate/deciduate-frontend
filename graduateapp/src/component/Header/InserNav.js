@@ -7,11 +7,12 @@ export default function InsertNav() {
     <div className={styles.Container}>
       <div className={styles.InsertTitle}>정보 입력하기</div>
       <div className={styles.InsertSubTitleDiv}>
-        <Link to="/InsertBasic" className={styles.subTitle}>
-          기본 정보입력
+        <Link to="/NewInput" className={styles.subTitle}>
+          기본 정보 입력
         </Link>
-        <Link to="/StepInsert" className={styles.subTitle}>
-          사용자이수정보입력
+        &nbsp;&nbsp;
+        <Link to="/NewInput2" className={styles.subTitle}>
+          사용자 이수 정보 입력
         </Link>
       </div>
     </div>

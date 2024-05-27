@@ -21,6 +21,7 @@ import Result_Pass from "./component/Result/Result_Pass";
 import "./App.css";
 
 import NewInput from "./component/newMy/newInput";
+import NewInput2 from "./component/newMy/newInput2";
 
 function App() {
   return (
@@ -42,7 +43,8 @@ function App() {
           <Route path="/MY/ViewMy" element={<ViewMy />} />
           <Route path="/MY/Result_NonPass" element={<Result_NonPass />} />
           <Route path="/MY/Result_Pass" element={<Result_Pass />} />
-          <Route path="/MY/NewInput" element={<NewInput />} />
+          <Route path="/NewInput" element={<NewInput />} />
+          <Route path="/NewInput2" element={<NewInput2 />} />
         </Routes>
       </BrowserRouter>
     </div>
