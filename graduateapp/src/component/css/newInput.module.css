@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 5rem 7rem 0 7rem;
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+}
+
+
+
+.student_no {
+  font-size: 15px;
+}
+
+.inputStudent_no {
+  width: 240px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 18px;
+}
