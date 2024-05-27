@@ -9,16 +9,114 @@
   justify-content: center;
 }
 
-
+.hello {
+  font-family: 'Pretendard-SemiBold';
+  font-size: 24px;
+  width: 240px;
+  height: 76.8px;
+  margin: 0px 0px 2px;
+}
 
 .student_no {
   font-size: 15px;
+  padding: 6px 7px 6px 0;
+  color: #4E5968;
+  margin: 0 0 10px 0;
 }
 
 .inputStudent_no {
-  width: 240px;
+  width: 718px;
   height: 48px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 0 18px;
+}
+
+.major_type {
+  font-size: 15px;
+  padding: 6px 7px 6px 0;
+  color: #4E5968;
+
+}
+
+.indexMajor_type {
+  margin: 0 0 10px 0;
+}
+
+li {
+  list-style-type: none;
+  font-size: 18px;
+}
+
+.selectMajor_type {
+  width: 20px;
+  height: 20px;
+  color: black;
+}
+
+.selectMajor {
+  font-size: 15px;
+  padding: 6px 7px 6px 0;
+  color: #4E5968;
+  margin: 0 0 10px 0;
+}
+
+.dropdown {
+  width: 718px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0 18px;
+  position: relative;
+  user-select: none;
+}
+
+.dropdownButton {
+  padding: 15px 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  width: 718px;
+  height: 48px;
+  color: #4E5968;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdownContents {
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 0;
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 718px;
+  font-size: 18px;
+  color: black;
+  background-color: #EDEFF7;
+}
+
+.dropdownItems {
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* border-bottom: 1px solid black; */
+}
+
+.dropdownItems :hover {
+  background-color: #f4f4f4;
+}
+
+.etcInfo{
+  font-size: 15px;
+  padding: 6px 7px 6px 0;
+  color: #4E5968;
+}
+
+.etcInfo_type {
+  width: 20px;
+  height: 20px;
+  color: black;
 }
