@@ -12,7 +12,7 @@ import EditSubjects from "./component/My/EditSubjects";
 import EditExtras from "./component/My/EditExtras";
 import ViewMy from './component/My/ViewMy';
 import Result_NonPass from './component/Result/Result_NonPass';
-import Result_Pass from './component/Result/Result_Pass';
+// import Result_Pass from './component/Result/Result_Pass';
 
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
           <Route path="/StepInsert" element={<StepInsert />} />
           <Route path="/MY/ViewMy" element={<ViewMy />} />
           <Route path='/MY/Result_NonPass' element={<Result_NonPass/>}/>
-          <Route path='/MY/Result_Pass' element={<Result_Pass/>}/>
+          {/* <Route path='/MY/Result_Pass' element={<Result_Pass/>}/> */}
         </Routes>
       </BrowserRouter>
     </>

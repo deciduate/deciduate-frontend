@@ -62,7 +62,7 @@ export default function Result_NonPass() {
           <span className={styles.ListContainer}>
             {isOpen && (
               <ul className={styles.moreInfoList}>
-                <li className={styles.moreInfoListItem}><a className={styles.linkStyle1} href ="http://haksa.hufs.ac.kr/manual/H2/H2_2024-1-manual.xls">수강 유의 과목 확인하기</a></li>
+                <li className={styles.moreInfoListItem}><a className={styles.linkStyle1} href ="http://localhost:3000/subjectConditionPaper.xls">수강 유의 과목 확인하기</a></li>
                 <li className={styles.moreInfoListItem}>
                   <a className={styles.linkStyle2} href ="http://localhost:3000/foreignCertificationPaper.pdf" download>외국어 인증 요건 확인하기</a></li>
               </ul>

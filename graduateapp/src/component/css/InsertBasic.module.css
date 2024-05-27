@@ -16,8 +16,11 @@
 .InsertTitle {
   font-size: 20px;
   font-weight: bold;
-  margin-top: 50px;
+  margin: 50px 0 30px 0;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .InsertSubContainer {
   display: flex;
@@ -28,20 +31,37 @@
   border-radius: 10px;
 }
 
-.ID,
-.major,
-.majors,
-.subMajor {
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: bolder;
+.updateContainer {
+  margin: 4rem auto;
 }
 
-.ID {
-  margin-top: 50px;
+
+.inputInfo {
+ margin: 2rem 2rem 1rem 1rem;
 }
+
+.inputInfo3 {
+  margin: 11px 0 0 0;
+  background-color: #f3f5f7;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  height: 50px;
+  /* font-family: "Pretendard-Regular";
+  font-size: 20px; */
+}
+
+.studentId {
+  margin: 11px 0 0 0;
+  background-color: #f3f5f7;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  height: 50px;
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+}
+
 
 .text {
   font-size: 14px;
@@ -64,4 +84,65 @@ input[type="radio"] {
 
 input[type="radio"] + label {
   display: inline-block;
+}
+
+
+.dropdown2 {
+  width: 300px;
+  height: 50px;
+  position: relative;
+  user-select: none;
+}
+
+.dropdownButton2 {
+  padding: 15px 20px;
+  background-color: #f3f5f7;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+  height: 50px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownContents2 {
+  position: absolute;
+  z-index: 1;
+  top: 110%;
+  left: 0;
+  padding: 10px;
+  background-color: #f3f5f7;
+  border: none;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.dropdownItems2 {
+  padding: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dropdownItems2 :hover {
+  background-color: #f4f4f4;
+}
+
+
+.Completed {
+  width: 136px;
+  height: 55px;
+  border: none;
+  border-radius: 10px;
+  background-color: #002d56;
+  font-family: "Pretendard-Regular";
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  margin: 5rem 0 0.7rem 0;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
