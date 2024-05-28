@@ -2,14 +2,14 @@
   display: flex;
   width: 60%;
   flex-direction: column;
-  margin-bottom: 5px;
+  margin-bottom: 3rem;
 }
 .InsertTitle {
   display: flex;
   font-size: 24px;
   font-weight: bold;
   justify-content: flex-start;
-  color: #333D4B;
+  color: #333d4b;
   margin: 0 0 10px 0;
 }
 .InsertSubTitleDiv {
@@ -22,10 +22,10 @@
   display: flex;
   padding: 10px;
   font-weight: 600;
-  color: #333D4B;
+  color: #333d4b;
   text-decoration: none;
 }
 .subTitle:hover {
-  background-color: #F2F4F6;
-  color: #333D4B;
+  background-color: #f2f4f6;
+  color: #333d4b;
 }
