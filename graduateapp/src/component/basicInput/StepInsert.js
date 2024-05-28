@@ -63,19 +63,19 @@ function StepInsert() {
         <InsertNav />
         <div className={styles.Container}>
           {/* step1 */}
-          <div className={styles.step}>
-            Step.1 취득학점 및 성적을 입력해주세요
+          <div className={styles.Div}>
+            <span className={styles.backColor}>STEP. 1</span>
+            <div className={styles.step}>취득학점 및 성적을 입력해주세요</div>
           </div>
+
           <div className={styles.stepContainer}>
-            <span>
-              ➀ 종합정보시스템에 접속해주세요 ---
-              <a href="https://wis.hufs.ac.kr/src08/jsp/index.jsp">
-                한국외국어대학교 종합정보시스템 바로가기
-              </a>
-            </span>
+            ➀ 종합정보시스템에 접속해주세요
+            <a href="https://wis.hufs.ac.kr/src08/jsp/index.jsp">
+              &gt;&gt; 한국외국어대학교 종합정보시스템 바로가기
+            </a>
             <span>➁ 종합정보시스템에 로그인하기</span>
             <span>➂ 성적/학점/졸업관리 &gt; 성적 취득 현황에 접속</span>
-            <img src={creditImg} alt="Credit Info" />
+            {/* <img src={creditImg} alt="Credit Info" /> */}
             <span>➃ 위 화면에 표시되는 값 입력하기</span>
             <div className={styles.BoxContainer}>
               <div className={styles.Box}>
@@ -150,7 +150,7 @@ function StepInsert() {
                   onChange={(e) => setSelfSelection(e.target.value)}
                 />
               </div>
-              <div className={styles.space}></div>
+              {/* <div className={styles.space}></div> */}
 
               <div className={styles.Box}>
                 <div className={styles.contentTitle}>총취득</div>
@@ -174,8 +174,14 @@ function StepInsert() {
           </div>
 
           {/* step2 */}
-          <div className={styles.step}>
-            Step.2 수강한 전공필수 과목/교양 필수 과목을 체크해주세요
+          {/* <div className={styles.step}>
+             수강한 전공필수 과목/교양 필수 과목을 체크해주세요
+          </div> */}
+          <div className={styles.Div}>
+            <span className={styles.backColor}>STEP. 2</span>
+            <div className={styles.step}>
+              수강한 전공필수 과목/교양 필수 과목을 체크해주세요
+            </div>
           </div>
           <div className={styles.stepContainer2}>
             <div className={styles.Choice}>
@@ -207,12 +213,18 @@ function StepInsert() {
           </div>
 
           {/* step3 */}
-          <div className={styles.step}>
+          {/* <div className={styles.step}>
             Step.3 전공 졸업시험/졸업논문에 통과하셨나요?
+          </div> */}
+          <div className={styles.Div}>
+            <span className={styles.backColor}>STEP. 3</span>
+            <div className={styles.step}>
+              전공 졸업시험/졸업논문에 통과하셨나요?
+            </div>
           </div>
           <div className={styles.stepContainer}>
             <div className={styles.Choice}>
-              <div>
+              <div className={styles.center}>
                 <input type="radio" name="pass" value="통과여부" checked />
                 <span>본전공통과</span>
               </div>
@@ -228,14 +240,22 @@ function StepInsert() {
           </div>
 
           {/* step4 */}
-          <div className={styles.step}>
+          {/* <div className={styles.step}>
             Step.4 외국어 인증 완료했나요?
             <br />
             <span>
               *성적을 인증할 수 있는 ‘인증서 원본’을 최종학기 말까지 학사
               종합지원센터에 제출해야 합니다
             </span>
+          </div> */}
+          <div className={styles.Div}>
+            <span className={styles.backColor}>STEP. 4</span>
+            <div className={styles.step}>외국어 인증 완료했나요?</div>
           </div>
+          <span className={styles.stepMessage}>
+            *성적을 인증할 수 있는 ‘인증서 원본’을 최종학기 말까지 학사
+            종합지원센터에 제출해야 합니다
+          </span>
           <div className={styles.stepContainer}>
             <div className={styles.Choice}>
               <div>
