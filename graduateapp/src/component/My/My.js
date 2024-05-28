@@ -45,7 +45,6 @@ export default function My() {
   return (
     <>
       <div className={styles.page}>
-        <EditNav />
         {/* <span className={styles.cheerUp}>졸업까지 달려봅시다!</span> */}
         <div
           className={styles.infoContainer}
@@ -57,7 +56,8 @@ export default function My() {
               fontSize: "18px",
               color: "#ffffff",
               padding: "1.2rem 0 0 20px",
-              fontweight: "bold",
+              fontWeight: "bold",
+              fontSize: "22px",
             }}
           >
             {infoIndex[0]}

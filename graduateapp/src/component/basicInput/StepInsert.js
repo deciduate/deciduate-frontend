@@ -63,6 +63,7 @@ function StepInsert() {
         <InsertNav />
         <div className={styles.Container}>
           <div className={styles.updateContainer}>
+            <p className={styles.hello}>사용자 이수 정보를 알려주세요</p>
             {/* step1 */}
             <div className={styles.Div}>
               <span className={styles.backColor}>STEP. 1</span>
