@@ -10,6 +10,20 @@
   flex-direction: column;
   align-items: center;
 }
+.updateContainer {
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 40px;
+  padding: 2rem 3rem;
+
+  width: 750px;
+  height: auto;
+  font-family: "Pretendard-Regular";
+  margin-bottom: 3rem;
+
+  position: relative;
+  float: left;
+}
 .Container {
   display: flex;
   flex-direction: column;
@@ -65,7 +79,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
   border: solid 0px;
   border-radius: 10px;
   box-shadow: 2px 3px 5px 0px #142c46;
@@ -84,7 +98,7 @@
 }
 .contentTitle {
   color: #002d56;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: lighter;
   border: solid 0px;
   border-radius: 10px;
@@ -94,9 +108,6 @@
   align-items: center;
   text-align: center;
   align-content: center;
-}
-.space {
-  margin-left: 200px;
 }
 .content {
   width: 100%;
@@ -140,5 +151,5 @@
 }
 
 .submitButton:hover {
-  background-color: #008194;
+  background-color: #555;
 }

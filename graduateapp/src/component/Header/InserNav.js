@@ -11,7 +11,7 @@ export default function InsertNav() {
           기본 정보 입력
         </Link>
         &nbsp;&nbsp;
-        <Link to="/NewInput2" className={styles.subTitle}>
+        <Link to="/StepInsert" className={styles.subTitle}>
           사용자 이수 정보 입력
         </Link>
       </div>
