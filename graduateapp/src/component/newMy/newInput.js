@@ -2,9 +2,42 @@ import React, { useState } from "react";
 import styles from "../css/newInput.module.css";
 import MajorDropdown from "./MajorDropdown";
 import InsertNav from "../Header/InserNav";
+import axiosInstance from "../../api/axiosInstance";
 
 export default function NewInput() {
-  const [selectedMajorType, setSelectedMajorType] = useState(null);
+  const [user, setUser] = useState("");
+  const [studentNo, setStudentNo] = useState("");
+  const [selectedMajorType, setSelectedMajorType] = useState(1);
+  const [mainMajor, setMainMajor] = useState("");
+  const [doubleMajor, setDoubleMajor] = useState("");
+  const [minorMajor, setMinorMajor] = useState("");
+  const [transfer, setTransfer] = useState("");
+  const [foreign, setForeign] = useState("");
+
+  const handleSubmit = async () => {
+    try {
+      await axiosInstance.post("/api/v1/users/profiles/basics/", {
+        user: user,
+        student_no: studentNo, //학번
+        major_type: selectedMajorType, //전공유형 | 1:전공심화, 2:이중전공, 3:부전공, 4:전공심화+부전공
+        main_major: mainMajor, //본전공
+        double_major: doubleMajor, //이중전공
+        minor_major: minorMajor, //부전공
+        transfer: transfer, //편입생
+        foreign: foreign, //외국인전형
+      });
+      alert("등록되었습니다!");
+    } catch (error) {
+      console.error("Error submitting data:", error);
+    }
+  };
+
+  const majorName = [
+    { name: 1, value: "전공심화", setValue: setMainMajor },
+    { name: 2, value: "이중전공", setValue: setDoubleMajor },
+    { name: 3, value: "부전공", setValue: setMinorMajor },
+    { name: 4, value: "전공심화 + 부전공", setValue: setMinorMajor },
+  ];
 
   return (
     <div className={styles.container}>
@@ -29,7 +62,8 @@ export default function NewInput() {
                   type="number"
                   maxlength={2}
                   className={styles.inputStudent_no}
-                />{" "}
+                  onChange={(e) => setStudentNo(e.target.value)}
+                />
               </label>
             </div>
             <br />
@@ -37,112 +71,41 @@ export default function NewInput() {
             <div className={styles.major_type}>
               <span className={styles.indexMajor_type}> 전공유형 </span> <br />
               <ul>
-                <li>
-                  <input
-                    type="radio"
-                    className={styles.selectMajor_type}
-                    value={1}
-                    checked={selectedMajorType === 1}
-                    onChange={() => setSelectedMajorType(1)}
-                  />{" "}
-                  <span className={styles.selectMajor_type}>전공심화</span>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    className={styles.selectMajor_type}
-                    value={2}
-                    checked={selectedMajorType === 2}
-                    onChange={() => setSelectedMajorType(2)}
-                  />{" "}
-                  <span className={styles.selectMajor_type}>이중전공</span>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    className={styles.selectMajor_type}
-                    value={3}
-                    checked={selectedMajorType === 3}
-                    onChange={() => setSelectedMajorType(3)}
-                  />{" "}
-                  <span className={styles.selectMajor_type}>부전공</span>
-                </li>
-                <li>
-                  <input
-                    type="radio"
-                    className={styles.selectMajor_type}
-                    value={4}
-                    checked={selectedMajorType === 4}
-                    onChange={() => setSelectedMajorType(4)}
-                  />{" "}
-                  <span className={styles.selectMajor_type}>
-                    전공심화+부전공
-                  </span>
-                </li>
+                {majorName.map((major) => (
+                  <li key={major.name}>
+                    <input
+                      type="radio"
+                      className={styles.selectMajor_type}
+                      value={major.name}
+                      checked={selectedMajorType === major.name}
+                      onChange={() => setSelectedMajorType(major.name)}
+                    />{" "}
+                    <span className={styles.selectMajor_type}>
+                      {major.value}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
             <br />
 
             <div>
-              {selectedMajorType === 1 && (
+              <div className={styles.student_no}>
+                전공
+                <div className={styles.inputInfo3}>
+                  <MajorDropdown handleMajor={setMainMajor} />
+                </div>
+              </div>
+              {selectedMajorType != 1 && (
                 <div className={styles.student_no}>
-                  전공
+                  {majorName[selectedMajorType - 1].value}
                   <div className={styles.inputInfo3}>
-                    <MajorDropdown />
-                  </div>{" "}
+                    <MajorDropdown
+                      handleMajor={majorName[selectedMajorType - 1].setValue}
+                    />
+                  </div>
                   <br />
                 </div>
-              )}
-              {selectedMajorType === 2 && (
-                <>
-                  <div className={styles.student_no}>
-                    전공
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>
-                  </div>
-                  <div className={styles.student_no}>
-                    전공2
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>{" "}
-                    <br />
-                  </div>
-                </>
-              )}
-              {selectedMajorType === 3 && (
-                <>
-                  <div className={styles.student_no}>
-                    전공
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>
-                  </div>
-                  <div className={styles.student_no}>
-                    전공2
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>{" "}
-                    <br />
-                  </div>
-                </>
-              )}
-              {selectedMajorType === 4 && (
-                <>
-                  <div className={styles.student_no}>
-                    전공
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>
-                  </div>
-                  <div className={styles.student_no}>
-                    전공2
-                    <div className={styles.inputInfo3}>
-                      <MajorDropdown />
-                    </div>{" "}
-                    <br />
-                  </div>
-                </>
               )}
             </div>
 
@@ -188,7 +151,12 @@ export default function NewInput() {
           <br />
 
           <div className={styles.submitContainer}>
-            <button className={styles.submitButton}>등록하기</button>
+            <button
+              className={styles.submitButton}
+              onClick={() => handleSubmit()}
+            >
+              등록하기
+            </button>
           </div>
         </div>
       </div>
