@@ -1,33 +1,46 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import styles from "../css/StepInsert.module.css";
-import creditImg from "../img/credit.svg";
 import InsertNav from "../Header/InserNav";
+import axiosInstance from "../../api/axiosInstance";
 
 function StepInsert() {
-  const [majorValue, setMajorValue] = useState("");
-  const [refinementValue, setRefinementValue] = useState("");
+  const [majorValue, setMajorValue] = useState([]);
+  const [refinementValue, setRefinementValue] = useState([]);
+  const [flex, setFlex] = useState("");
+  const [flexSpeaking, setFlexSpeaking] = useState("");
+  const [toeic, setToeic] = useState("");
+  const [toeicSpeaking, setToeicSpeaking] = useState("");
 
-  const [firstMajor, setFirstMajor] = useState("");
+  const [mainMajor, setMainMajor] = useState("");
+  const [doubleMajor, setDoubleMajor] = useState("");
   const [secondMajor, setSecondMajor] = useState("");
-  const [thirdMajor, setThirdMajor] = useState("");
-  const [extramural, setExtramural] = useState("");
-  const [general, setGeneral] = useState("");
-  const [minor, setMinor] = useState("");
+  const [outside, setOutside] = useState("");
+  const [liberal, setLiberal] = useState("");
+  const [minorMajor, setMinorMajor] = useState("");
   const [teaching, setTeaching] = useState("");
   const [selfSelection, setSelfSelection] = useState("");
-  const [totalCredits, setTotalCredits] = useState("");
-  const [totalGPA, setTotalGPA] = useState("");
+  const [totalCredit, setTotalCredit] = useState("");
+  const [totalScore, setTotalScore] = useState("");
+
+  const [majorSubject, setMajorSubject] = useState([]);
+  const [liberalSubject, setLiberalSubject] = useState([]);
+
+  const [mainTestPass, setMainTestPass] = useState("");
+  const [doubleTestPass, setDoubleTestPass] = useState("");
+  const [foreignCertification, setForeignCertification] = useState("");
 
   useEffect(() => {
     // 서버에서 값을 받아오는 함수
     const fetchValues = async () => {
       try {
-        const majorResponse = await axios.get("/api/major");
-        const refinementResponse = await axios.get("/api/refinement");
-        setMajorValue(majorResponse.data);
-        setRefinementValue(refinementResponse.data);
+        const response = await axiosInstance.get("/api/v1/users/requirements");
+        setMajorValue(response.data.major_compulosry);
+        setRefinementValue(response.data.liberal_compulsory);
+        setFlex(response.data.flex);
+        setFlexSpeaking(response.data.flex_speaking);
+        setToeic(response.data.toeic);
+        setToeicSpeaking(response.data.toeic_speaking);
       } catch (error) {
         console.error("Error fetching values:", error);
       }
@@ -38,24 +51,45 @@ function StepInsert() {
 
   const handleSubmit = async () => {
     try {
-      const data = {
-        firstMajor,
-        secondMajor,
-        thirdMajor,
-        extramural,
-        general,
-        minor,
-        teaching,
-        selfSelection,
-        totalCredits,
-        totalGPA,
-      };
-      await axios.post("/api/submit", data);
+      await axiosInstance.post("/api/v1/users/profiles/completions/", {
+        credit: {
+          main_major: mainMajor,
+          double_major: doubleMajor,
+          second_major: secondMajor,
+          outside: outside,
+          liberal: liberal,
+          minor_major: minorMajor,
+          teaching: teaching,
+          self_selction: selfSelection,
+          total_credit: totalCredit,
+          total_score: totalScore,
+        },
+        major_subject: majorSubject,
+        liberal_subject: liberalSubject,
+        extra: {
+          main_test_pass: mainTestPass,
+          double_test_pass: doubleTestPass,
+          foreign_certification: foreignCertification,
+        },
+      });
       alert("등록되었습니다!");
     } catch (error) {
       console.error("Error submitting data:", error);
     }
   };
+
+  const inputValues = [
+    { name: "1전공", value: mainMajor, setValue: setMainMajor },
+    { name: "이중전공", value: doubleMajor, setValue: setDoubleMajor },
+    { name: "2전공", value: secondMajor, setValue: setSecondMajor },
+    { name: "실외", value: outside, setValue: setOutside },
+    { name: "교양", value: liberal, setValue: setLiberal },
+    { name: "부전공", value: minorMajor, setValue: setMinorMajor },
+    { name: "교직", value: teaching, setValue: setTeaching },
+    { name: "자선", value: selfSelection, setValue: setSelfSelection },
+    { name: "총취득", value: totalCredit, setValue: setTotalCredit },
+    { name: "총평점", value: totalScore, setValue: setTotalScore },
+  ];
 
   return (
     <>
@@ -80,98 +114,19 @@ function StepInsert() {
               {/* <img src={creditImg} alt="Credit Info" /> */}
               <span>➃ 위 화면에 표시되는 값 입력하기</span>
               <div className={styles.BoxContainer}>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>1전공</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={firstMajor}
-                    onChange={(e) => setFirstMajor(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>이중전공</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={secondMajor}
-                    onChange={(e) => setSecondMajor(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>2전공</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={thirdMajor}
-                    onChange={(e) => setThirdMajor(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>실외</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={extramural}
-                    onChange={(e) => setExtramural(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>교양</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={general}
-                    onChange={(e) => setGeneral(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>부전공</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={minor}
-                    onChange={(e) => setMinor(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>교직</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={teaching}
-                    onChange={(e) => setTeaching(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>자선</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={selfSelection}
-                    onChange={(e) => setSelfSelection(e.target.value)}
-                  />
-                </div>
-                {/* <div className={styles.space}></div> */}
-
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>총취득</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={totalCredits}
-                    onChange={(e) => setTotalCredits(e.target.value)}
-                  />
-                </div>
-                <div className={styles.Box}>
-                  <div className={styles.contentTitle}>총평점</div>
-                  <input
-                    type="number"
-                    className={styles.content}
-                    value={totalGPA}
-                    onChange={(e) => setTotalGPA(e.target.value)}
-                  />
-                </div>
+                {inputValues.map((value) => {
+                  return (
+                    <div className={styles.Box}>
+                      <div className={styles.contentTitle}>{value.name}</div>
+                      <input
+                        type="number"
+                        className={styles.content}
+                        value={value.value}
+                        onChange={(e) => value.setValue(e.target.value)}
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -188,29 +143,39 @@ function StepInsert() {
             <div className={styles.stepContainer2}>
               <div className={styles.Choice}>
                 <span>➀ 전공필수과목</span>
-                <div>
+                {/* <div>
                   <input type="radio" name="Major" value="전공" checked />
                   <span>{majorValue}</span>
-                </div>
-                {/* {majorValue.map((subject, index) => (
-              <div key={index}>
-                <input type="radio" name="major" value={majorValue} />
-                <span>{majorValue}</span>
-              </div>
-            ))} */}
+                </div> */}
+                {majorValue.map((subject) => (
+                  <div key={subject}>
+                    <input
+                      type="radio"
+                      name="major"
+                      value={"전공"}
+                      onChange={(e) => setMajorValue(e.target.value)}
+                    />
+                    <span>{subject}</span>
+                  </div>
+                ))}
               </div>
               <div className={styles.Choice}>
                 <span>➁ 교양필수과목</span>
-                <div>
+                {/* <div>
                   <input type="radio" name="refinement" value="교양" checked />
                   <span>{refinementValue}</span>
-                </div>
-                {/* {refinementValue.map((subject, index) => (
-              <div key={index}>
-                <input type="radio" name="refinement" value={refinementValue} />
-                <span>{refinementValue}</span>
-              </div>
-            ))} */}
+                </div> */}
+                {refinementValue.map((subject) => (
+                  <div key={subject}>
+                    <input
+                      type="radio"
+                      name="refinement"
+                      value={"교양"}
+                      onChange={(e) => setRefinementValue(e.target.value)}
+                    />
+                    <span>{subject}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -227,11 +192,23 @@ function StepInsert() {
             <div className={styles.stepContainer}>
               <div className={styles.Choice}>
                 <div className={styles.center}>
-                  <input type="radio" name="pass" value="통과여부" checked />
+                  <input
+                    type="radio"
+                    name="pass"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setMainTestPass(e.target.value)}
+                  />
                   <span>본전공통과</span>
                 </div>
                 <div>
-                  <input type="radio" name="pass" value="통과여부" checked />
+                  <input
+                    type="radio"
+                    name="pass"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setDoubleTestPass(e.target.value)}
+                  />
                   <span>이중전공통과</span>
                 </div>
                 <div>
@@ -261,25 +238,72 @@ function StepInsert() {
             <div className={styles.stepContainer}>
               <div className={styles.Choice}>
                 <div>
-                  <input type="radio" name="done" value="통과여부" checked />
-                  <span>Flex 551점 이상</span>
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
+                  <span>Flex {flex} 이상</span>
                 </div>
                 <div>
-                  <input type="radio" name="done" value="통과여부" checked />
-                  <span>TOEIC 645점 이상</span>
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
+                  <span>Flex speaking {flexSpeaking} 이상</span>
                 </div>
                 <div>
-                  <input type="radio" name="done" value="통과여부" checked />
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
+                  <span>TOEIC {toeic} 이상</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
+                  <span>TOEIC speaking {toeicSpeaking} 이상</span>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
                   <span>장애학생 외국어 인증 면제</span>
                 </div>
                 <div>
-                  <input type="radio" name="done" value="통과여부" checked />
+                  <input
+                    type="radio"
+                    name="done"
+                    value="통과여부"
+                    checked
+                    onChange={(e) => setForeignCertification(e.target.value)}
+                  />
                   <span>외국어 인증 대체 관점 통과</span>
                 </div>
               </div>
             </div>
             <div className={styles.submitContainer}>
-              <button className={styles.submitButton} onClick={handleSubmit}>
+              <button
+                className={styles.submitButton}
+                onClick={() => handleSubmit()}
+              >
                 등록하기
               </button>
             </div>

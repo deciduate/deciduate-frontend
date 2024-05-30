@@ -88,6 +88,7 @@
   width: 270px;
   min-height: 380px;
   margin: 2rem 1.4rem 3rem 0;
+  vertical-align: top;
 }
 
 .needThisTitle {
@@ -98,9 +99,42 @@
   position: relative;
 }
 
+.needThisItemTitle {
+  position: relative;
+  margin: 1rem 0 0 0.3rem;
+  padding: 0 0 1rem 0;
+  font-family: "Pretendard-Regular";
+  font-size: 20px;
+}
+
+.needThisItemSubTitle {
+  position: relative;
+  margin: 0 0 1rem 1rem;
+  padding: 1rem 0 1rem 1rem;
+  font-family: "Pretendard-Regular";
+  font-size: 21px;
+}
+
+.needThisItemMoreInfo {
+  position: relative;
+  margin: 0 1rem;
+  padding: 1rem 0 0 0;
+  line-height: 2rem;
+  font-family: "Pretendard-Regular";
+  font-size: 21px;
+}
+
+.needThisItemList {
+  position: relative;
+  margin: 0 1rem;
+}
+
 .needThisItem {
   position: relative;
-  margin: 0 2rem;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  font-family: "Pretendard-Medium";
+  font-size: 23px;
 }
 
 .moreInfoButton {
@@ -169,4 +203,14 @@
   width: 700px;
   object-fit: cover;
   display: inline-block;
+}
+
+.nonPassList {
+  margin: 0;
+  padding-inline-start: 0.2rem;
+  list-style-position: inside;
+}
+
+.nonPassList {
+  list-style-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2'><polyline points='20 6 9 17 4 12'></polyline></svg>");
 }
